@@ -31,184 +31,258 @@ export default function Home() {
     <div
       className={`min-h-screen ${darkMode ? "dark bg-gray-900" : "bg-gray-50"}`}
     >
-      <header
-        className={`fixed w-full z-10 ${
-          darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"
-        } shadow-md transition-colors duration-300`}
-      >
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center">
-            <div className="h-10 w-10 relative mr-2">
-              {/* Using placeholder image since actual path might not be correct */}
-              <div className="h-10 w-10 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full flex items-center justify-center overflow-hidden">
-  <img src="/images/logo.jpeg" alt="Profile" className="h-full w-full object-cover" />
-</div>
-
-            </div>
-            <span className="text-xl font-bold">VisionityAI</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 font-medium">
-            <a
-              href="#"
-              className={`${
-                darkMode
-                  ? "text-white hover:text-blue-400"
-                  : "text-gray-800 hover:text-blue-600"
-              } transition duration-300`}
-            >
-              Home
-            </a>
-            <a
-              href="#solutions"
-              className={`${
-                darkMode
-                  ? "text-white hover:text-blue-400"
-                  : "text-gray-800 hover:text-blue-600"
-              } transition duration-300`}
-            >
-              Solutions
-            </a>
-            <a
-              href="#about"
-              className={`${
-                darkMode
-                  ? "text-white hover:text-blue-400"
-                  : "text-gray-800 hover:text-blue-600"
-              } transition duration-300`}
-            >
-              About Us
-            </a>
-            <a
-              href="#contact"
-              className={`${
-                darkMode
-                  ? "text-white hover:text-blue-400"
-                  : "text-gray-800 hover:text-blue-600"
-              } transition duration-300`}
-            >
-              Contact
-            </a>
-          </nav>
-
-          <div className="flex items-center">
-            <button
-              onClick={toggleTheme}
-              className={`p-2 rounded-full ${
-                darkMode
-                  ? "bg-gray-800 text-yellow-300"
-                  : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              {darkMode ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  />
-                </svg>
-              )}
-            </button>
-
-            <button className="ml-4 md:hidden" onClick={toggleMobileMenu}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+    <header
+  className={`fixed w-full z-10 ${
+    darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-800"
+  } shadow-md transition-colors duration-300`}
+>
+  <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+    <div className="flex items-center">
+      <div className="h-10 w-10 relative mr-2">
+        <div className="h-10 w-10 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full flex items-center justify-center overflow-hidden">
+          <img src="/images/logo.jpeg" alt="Profile" className="h-full w-full object-cover" />
         </div>
+      </div>
+      <span className="text-2xl font-bold tracking-tight">
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Vision</span>
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">ity</span>
+    <span className="text-blue-600 dark:text-blue-400">AI</span>
+    <span className="absolute -mt-1 ml-0.5 text-xs text-gray-500 dark:text-gray-400">®</span>
+  </span>
+    </div>
 
-        {/* Mobile Navigation Menu */}
-        {mobileMenuOpen && (
-          <div 
-            className={`md:hidden px-4 py-3 ${
-              darkMode ? "bg-gray-800" : "bg-gray-50"
-            }`}
+    {/* Desktop Navigation */}
+    <nav className="hidden md:flex space-x-6 font-medium justify-center items-center">
+      <a
+        href="#"
+        className={`${
+          darkMode
+            ? "text-white hover:text-blue-400"
+            : "text-gray-800 hover:text-blue-600"
+        } transition duration-300 relative group py-2 px-3`}
+      >
+        Home
+        <span className={`absolute bottom-0 left-0 w-0 h-0.5 ${
+          darkMode ? "bg-blue-400" : "bg-blue-600"
+        } transition-all duration-300 group-hover:w-full`}></span>
+      </a>
+      <a
+        href="#solutions"
+        className={`${
+          darkMode
+            ? "text-white hover:text-blue-400"
+            : "text-gray-800 hover:text-blue-600"
+        } transition duration-300 relative group py-2 px-3`}
+      >
+        Solutions
+        <span className={`absolute bottom-0 left-0 w-0 h-0.5 ${
+          darkMode ? "bg-blue-400" : "bg-blue-600"
+        } transition-all duration-300 group-hover:w-full`}></span>
+      </a>
+      <a
+        href="#about"
+        className={`${
+          darkMode
+            ? "text-white hover:text-blue-400"
+            : "text-gray-800 hover:text-blue-600"
+        } transition duration-300 relative group py-2 px-3`}
+      >
+        About Us
+        <span className={`absolute bottom-0 left-0 w-0 h-0.5 ${
+          darkMode ? "bg-blue-400" : "bg-blue-600"
+        } transition-all duration-300 group-hover:w-full`}></span>
+      </a>
+      <a
+        href="#contact"
+        className={`${
+          darkMode
+            ? "text-white hover:text-blue-400"
+            : "text-gray-800 hover:text-blue-600"
+        } transition duration-300 relative group py-2 px-3`}
+      >
+        Contact
+        <span className={`absolute bottom-0 left-0 w-0 h-0.5 ${
+          darkMode ? "bg-blue-400" : "bg-blue-600"
+        } transition-all duration-300 group-hover:w-full`}></span>
+      </a>
+    </nav>
+
+    <div className="flex items-center space-x-4">
+      {/* Get Started Button */}
+      <a
+        href="/get-started"
+        className={`hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full font-medium ${
+          darkMode
+            ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700"
+            : "bg-gradient-to-r from-blue-600 to-purple-500 text-white hover:from-blue-700 hover:to-purple-600"
+        } transition-all duration-300 transform hover:scale-105 shadow-md`}
+      >
+        Get Started
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4 ml-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          />
+        </svg>
+      </a>
+
+      {/* Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        className={`p-2 rounded-full ${
+          darkMode
+            ? "bg-gray-800 text-yellow-300 hover:bg-gray-700"
+            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+        } transition-colors duration-300`}
+        aria-label="Toggle theme"
+      >
+        {darkMode ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <div className="flex flex-col space-y-3">
-              <a
-                href="#"
-                className={`px-3 py-2 rounded-md ${
-                  darkMode
-                    ? "text-white hover:bg-gray-700"
-                    : "text-gray-800 hover:bg-gray-200"
-                } transition duration-300`}
-                onClick={toggleMobileMenu}
-              >
-                Home
-              </a>
-              <a
-                href="#solutions"
-                className={`px-3 py-2 rounded-md ${
-                  darkMode
-                    ? "text-white hover:bg-gray-700"
-                    : "text-gray-800 hover:bg-gray-200"
-                } transition duration-300`}
-                onClick={toggleMobileMenu}
-              >
-                Solutions
-              </a>
-              <a
-                href="#about"
-                className={`px-3 py-2 rounded-md ${
-                  darkMode
-                    ? "text-white hover:bg-gray-700"
-                    : "text-gray-800 hover:bg-gray-200"
-                } transition duration-300`}
-                onClick={toggleMobileMenu}
-              >
-                About Us
-              </a>
-              <a
-                href="#contact"
-                className={`px-3 py-2 rounded-md ${
-                  darkMode
-                    ? "text-white hover:bg-gray-700"
-                    : "text-gray-800 hover:bg-gray-200"
-                } transition duration-300`}
-                onClick={toggleMobileMenu}
-              >
-                Contact
-              </a>
-            </div>
-          </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
         )}
-      </header>
+      </button>
+
+      {/* Mobile Menu Button */}
+      <button 
+        className="md:hidden" 
+        onClick={toggleMobileMenu}
+        aria-label="Open menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Mobile Navigation Menu */}
+  {mobileMenuOpen && (
+    <div 
+      className={`md:hidden px-4 py-3 ${
+        darkMode ? "bg-gray-800" : "bg-gray-50"
+      } shadow-lg`}
+    >
+      <div className="flex flex-col space-y-3">
+        <a
+          href="#"
+          className={`px-3 py-2 rounded-md ${
+            darkMode
+              ? "text-white hover:bg-gray-700"
+              : "text-gray-800 hover:bg-gray-200"
+          } transition duration-300`}
+          onClick={toggleMobileMenu}
+        >
+          Home
+        </a>
+        <a
+          href="#solutions"
+          className={`px-3 py-2 rounded-md ${
+            darkMode
+              ? "text-white hover:bg-gray-700"
+              : "text-gray-800 hover:bg-gray-200"
+          } transition duration-300`}
+          onClick={toggleMobileMenu}
+        >
+          Solutions
+        </a>
+        <a
+          href="#about"
+          className={`px-3 py-2 rounded-md ${
+            darkMode
+              ? "text-white hover:bg-gray-700"
+              : "text-gray-800 hover:bg-gray-200"
+          } transition duration-300`}
+          onClick={toggleMobileMenu}
+        >
+          About Us
+        </a>
+        <a
+          href="#contact"
+          className={`px-3 py-2 rounded-md ${
+            darkMode
+              ? "text-white hover:bg-gray-700"
+              : "text-gray-800 hover:bg-gray-200"
+          } transition duration-300`}
+          onClick={toggleMobileMenu}
+        >
+          Contact
+        </a>
+        {/* Get Started Button for Mobile */}
+        <a
+          href="/get-started"
+          className={`flex items-center justify-center px-4 py-2 rounded-md font-medium ${
+            darkMode
+              ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+              : "bg-gradient-to-r from-blue-600 to-purple-500 text-white"
+          } transition duration-300`}
+          onClick={toggleMobileMenu}
+        >
+          Get Started
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4 ml-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  )}
+</header>
 
       <main>
         {/* Hero Section */}
