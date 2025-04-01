@@ -39,14 +39,24 @@ export default function Home() {
   <div className="container mx-auto px-6 py-4 flex items-center justify-between">
     <div className="flex items-center">
       <div className="h-10 w-10 relative mr-2">
-        <div className="h-13 w-13 bg-gradient-to-r  rounded-full flex items-center justify-center overflow-hidden">
-          <img src="/images/logo.jpeg" alt="Profile" className="h-full w-full object-cover" />
-        </div>
+      <div className="h-13 w-13 bg-gradient-to-r rounded-full flex items-center justify-center overflow-hidden">
+  <img 
+    src="/images/lightlogo.png" 
+    alt="Profile" 
+    className="h-full w-full object-cover dark:hidden"
+  />
+  <img 
+    src="/images/darklogo.png" 
+    alt="Profile" 
+    className="h-full w-full object-cover hidden dark:block"
+  />
+</div>
+
       </div>
       <span className="text-2xl font-bold tracking-tight">
     <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">VISION</span>
     <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">ITY</span>
-    <span className="text-blue-600 dark:text-blue-400">AI</span>
+    {/* <span className="text-blue-600 dark:text-blue-400">AI</span> */}
     {/* <span className="absolute -mt-1 ml-0.5 text-xs text-gray-500 dark:text-gray-400">®</span> */}
   </span>
     </div>
@@ -318,7 +328,7 @@ export default function Home() {
                   darkMode ? "text-gray-300" : "text-gray-700"
                 }`}
               >
-                VisionityAI leverages cutting-edge artificial intelligence to
+                Visionity leverages cutting-edge artificial intelligence to
                 transform your business operations and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -337,14 +347,16 @@ export default function Home() {
               </div>
             </div>
             <div className="md:w-1/2 mt-12 md:mt-0">
-            <div className="relative h-60 md:h-96 w-full rounded-lg bg-gradient-to-br  flex items-center justify-center overflow-hidden">
-  <img 
-    src="/images/logo.jpeg" 
-    alt="Background" 
-    className="absolute inset-0 w-full h-full object-contain opacity-100"
-  />
-  {/* <p className="relative text-white text-2xl font-semibold">Your Text Here</p> */}
-</div>
+            <div
+      className={`relative h-60 md:h-96 w-full rounded-lg bg-gradient-to-br flex items-center justify-center overflow-hidden ${darkMode ? "bg-[#000000]" : "bg-gray-50"}`}
+    >
+      <img 
+        src={darkMode ? "/images/darklogo.png" : "/images/lightlogo.png"} 
+        alt="Background" 
+        className="absolute inset-0 w-full h-full object-contain opacity-100"
+      />
+      {/* <p className="relative text-white text-2xl font-semibold">Your Text Here</p> */}
+    </div>
 
             </div>
           </div>
@@ -487,7 +499,7 @@ export default function Home() {
               <div className="md:w-1/2 md:pr-12 mb-8 md:mb-0">
               <div className="relative h-60 md:h-96 w-full rounded-lg bg-gradient-to-br  flex items-center justify-center overflow-hidden">
   <img 
-    src="/images/logo.jpeg" 
+    src={darkMode ? "/images/darklogo.png" : "/images/lightlogo.png"} 
     alt="Background" 
     className="absolute inset-0 w-full h-full object-contain opacity-100"
   />
@@ -500,14 +512,14 @@ export default function Home() {
                     darkMode ? "text-white" : "text-gray-900"
                   }`}
                 >
-                  About VisionityAI
+                  About Visionity
                 </h2>
                 <p
                   className={`mb-6 ${
                     darkMode ? "text-gray-300" : "text-gray-700"
                   }`}
                 >
-                  Founded in 2023, VisionityAI is at the forefront of AI
+                  Founded in 2023, Visionity is at the forefront of AI
                   innovation, dedicated to creating solutions that empower
                   businesses to achieve their goals through intelligent
                   automation and data-driven insights.
@@ -557,7 +569,7 @@ export default function Home() {
               {[
                 {
                   quote:
-                    "VisionityAI's computer vision solution has revolutionized our quality control process, reducing defects by 78% and increasing productivity.",
+                    "Visionity's computer vision solution has revolutionized our quality control process, reducing defects by 78% and increasing productivity.",
                   name: "Rahul Sharma",
                   position: "CTO, TechInnovate",
                 },
@@ -569,7 +581,7 @@ export default function Home() {
                 },
                 {
                   quote:
-                    "The predictive analytics platform provided by VisionityAI has transformed how we forecast demand, resulting in 42% less inventory waste.",
+                    "The predictive analytics platform provided by Visionity has transformed how we forecast demand, resulting in 42% less inventory waste.",
                   name: "Amit Singh",
                   position: "Supply Chain Director, GlobalFoods",
                 },
@@ -638,7 +650,7 @@ export default function Home() {
                 darkMode ? "text-gray-300" : "text-gray-700"
               }`}
             >
-              Get in touch with our team today to discover how VisionityAI can
+              Get in touch with our team today to discover how Visionity can
               help you achieve your business goals.
             </p>
             <button className="bg-gradient-to-r from-pink-500 to-blue-500 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 text-lg">
@@ -659,11 +671,11 @@ export default function Home() {
         <div className="flex items-center mb-4">
           <div className="h-10 w-10 relative mr-2">
           <div className="h-10 w-10 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full flex items-center justify-center overflow-hidden">
-  <img src="/images/logo.jpeg" alt="Profile" className="h-full w-full object-cover" />
+  <img  src={darkMode ? "/images/darklogo.png" : "/images/lightlogo.png"}  alt="Profile" className="h-full w-full object-cover" />
 </div>
          
           </div>
-          <span className="text-xl font-bold">VisionityAI</span>
+          <span className="text-xl font-bold">Visionity</span>
         </div>
         <p className={`mb-4 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
           Leveraging cutting-edge artificial intelligence to transform your business operations and drive innovation.
@@ -761,7 +773,7 @@ export default function Home() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
             <span className={darkMode ? "text-gray-300" : "text-gray-600"}>
-              info@visionityai.com
+              info@Visionity.com
             </span>
           </li>
           <li className="flex items-start">
@@ -795,7 +807,7 @@ export default function Home() {
     <div className="mt-12 pt-8 border-t border-gray-700">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <p className={`text-sm ${darkMode ? "text-gray-400" : "text-gray-600"} mb-4 md:mb-0`}>
-          © {new Date().getFullYear()} VisionityAI. All rights reserved.
+          © {new Date().getFullYear()} Visionity. All rights reserved.
         </p>
         <div className="flex flex-wrap justify-center space-x-4 text-sm">
           <a href="#" className={`${darkMode ? "text-gray-400 hover:text-white" : "text-gray-600 hover:text-blue-600"} transition duration-300 mb-2 md:mb-0`}>Privacy Policy</a>
