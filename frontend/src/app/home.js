@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Faq from "./constants/FaqConstants";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -659,7 +660,9 @@ export default function Home() {
           </div>
           
         </section>
-
+        {/* made by abhishek */}
+        <Faq />
+        {/* end by abhishek */}
       </main>
       <footer className={`py-12 ${darkMode ? "bg-[#000000] text-white" : "bg-gray-100 text-[#161616]"}`}>
   <div className="container mx-auto px-4">
