@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Faq from "./constants/FaqConstants";
+import WhatsAppButton from "./constants/whatsapp";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -662,6 +663,7 @@ export default function Home() {
         </section>
         {/* made by abhishek */}
         <Faq />
+        <WhatsAppButton />
         {/* end by abhishek */}
       </main>
       <footer className={`py-12 ${darkMode ? "bg-[#000000] text-white" : "bg-gray-100 text-[#161616]"}`}>
