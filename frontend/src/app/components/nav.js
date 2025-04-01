@@ -38,12 +38,12 @@ const Navbar = ({ darkMode = false, toggleDarkMode }) => {
         {/* Logo */}
         <div className="flex items-center">
           <div className="font-bold text-xl tracking-tight relative cursor-pointer">
-            <span className={darkMode ? "text-gray-100" : "text-gray-800"}>Vision</span>
-            <span className={darkMode ? "text-blue-400" : "text-blue-600"}>ity</span>
-            <span className={darkMode ? "text-teal-400" : "text-teal-500"}>
-              AI
-              <span className="absolute -top-1.5 right-0 h-1 w-1 rounded-full bg-purple-500 animate-pulse"></span>
-            </span>
+          <span className="text-2xl font-bold tracking-tight">
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Vision</span>
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">ity</span>
+    <span className="text-blue-600 dark:text-blue-400">AI</span>
+    <span className="absolute -mt-1 ml-0.5 text-xs text-gray-500 dark:text-gray-400">®</span>
+  </span>
           </div>
         </div>
         
@@ -73,22 +73,7 @@ const Navbar = ({ darkMode = false, toggleDarkMode }) => {
             </a>
           ))}
           
-          <a 
-            href="/get-started" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={`
-              ml-4 px-6 py-3 rounded-full font-medium 
-              transition-all duration-300 transform hover:scale-105 hover:shadow-lg
-              ${darkMode ? 
-                'bg-blue-500 hover:bg-blue-400 text-white' : 
-                'bg-blue-600 hover:bg-blue-500 text-white'}
-            `}
-          >
-            Get Started
-          </a>
-          
-          {/* Dark Mode Toggle */}
+
           <button 
             onClick={toggleDarkMode}
             className="ml-3 p-3 rounded-full transition-all duration-300 hover:bg-opacity-20"
