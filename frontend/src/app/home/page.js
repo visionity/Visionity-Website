@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import Faq from "../../constants/FaqConstants";
 import WhatsAppButton from "../../constants/whatsapp";
