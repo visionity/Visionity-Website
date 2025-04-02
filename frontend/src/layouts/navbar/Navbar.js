@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const Navbar = ({ darkMode = false, toggleDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
   
   // Handle scroll effect
   useEffect(() => {
@@ -20,10 +21,63 @@ const Navbar = ({ darkMode = false, toggleDarkMode }) => {
   }, []);
   
   const navLinks = [
-    { name: 'Home', href: '#', id: 'home' },
-    { name: 'Solutions', href: '#solutions', id: 'solutions' },
-    { name: 'About Us', href: '#about', id: 'about' },
-    { name: 'Contact', href: '#contact', id: 'contact' }
+    { 
+      name: 'SERVICES', 
+      href: '#services', 
+      id: 'services',
+      hoverContent: [
+        { title: 'Web Application', href: '#web-app' },
+        { title: 'Mobile App Development', href: '#mobile-app' },
+        { title: 'Full Stack Development', href: '#fullstack' },
+        { title: 'Digital Marketing', href: '#digital-marketing' },
+        { title: 'UX/UI Design', href: '#uxui' }
+      ]
+    },
+    { 
+      name: 'TECHNOLOGY', 
+      href: '#technology', 
+      id: 'technology',
+      hoverContent: [
+        { title: 'React.js', href: '#react' },
+        { title: 'Next.js', href: '#nextjs' },
+        { title: 'Node.js', href: '#nodejs' },
+        { title: 'AWS', href: '#aws' },
+        { title: 'Blockchain', href: '#blockchain' }
+      ]
+    },
+    { 
+      name: 'INDUSTRY', 
+      href: '#industry', 
+      id: 'industry',
+      hoverContent: [
+        { title: 'Healthcare', href: '#healthcare' },
+        { title: 'Finance', href: '#finance' },
+        { title: 'Education', href: '#education' },
+        { title: 'E-commerce', href: '#ecommerce' },
+        { title: 'Manufacturing', href: '#manufacturing' }
+      ] 
+    },
+    { 
+      name: 'CASE STUDY', 
+      href: '#caseStudy', 
+      id: 'caseStudy',
+      hoverContent: [
+        { title: 'Enterprise Solutions', href: '#enterprise' },
+        { title: 'Startup Projects', href: '#startup' },
+        { title: 'Mobile Applications', href: '#mobile-cases' },
+        { title: 'Web Platforms', href: '#web-platforms' }
+      ] 
+    },
+    { 
+      name: 'CONTACT US', 
+      href: '#contact', 
+      id: 'contact',
+      hoverContent: [
+        { title: 'Get Quote', href: '#quote' },
+        { title: 'Support', href: '#support' },
+        { title: 'Partnership', href: '#partnership' }
+      ] 
+    }
   ];
   
   return (
@@ -39,10 +93,8 @@ const Navbar = ({ darkMode = false, toggleDarkMode }) => {
         <div className="flex items-center">
           <div className="font-bold text-xl tracking-tight relative cursor-pointer">
           <span className="text-2xl font-bold tracking-tight">
-    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Vision</span>
-    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">ity</span>
-    <span className="text-blue-600 dark:text-blue-400">AI</span>
-    <span className="absolute -mt-1 ml-0.5 text-xs text-gray-500 dark:text-gray-400">®</span>
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">VISIO</span>
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">NITY</span>
   </span>
           </div>
         </div>
@@ -50,27 +102,60 @@ const Navbar = ({ darkMode = false, toggleDarkMode }) => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-2">
           {navLinks.map((link) => (
-            <a
+            <div 
               key={link.id}
-              href={link.href}
-              onClick={() => setActiveLink(link.id)}
-              className={`
-                relative px-4 py-3 font-medium rounded-lg transition-all duration-300
-                ${activeLink === link.id ? 
-                  `${darkMode ? 'text-blue-400' : 'text-blue-600'} font-semibold` : 
-                  `${darkMode ? 'text-gray-300' : 'text-gray-700'} hover:${darkMode ? 'text-blue-400' : 'text-blue-600'}`
-                }
-                group
-              `}
+              className="relative"
+              onMouseEnter={() => setHoveredItem(link.id)}
+              onMouseLeave={() => setHoveredItem(null)}
             >
-              {link.name}
-              <span className={`
-                absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 
-                ${darkMode ? 'bg-blue-400' : 'bg-blue-600'} 
-                transition-all duration-300 group-hover:w-4/5
-                ${activeLink === link.id ? 'w-4/5' : ''}
-              `}></span>
-            </a>
+              <a
+                href={link.href}
+                onClick={() => setActiveLink(link.id)}
+                className={`
+                  relative px-4 py-3 font-medium rounded-lg transition-all duration-300
+                  ${activeLink === link.id ? 
+                    `${darkMode ? 'text-blue-400' : 'text-blue-600'} font-semibold` : 
+                    `${darkMode ? 'text-gray-300' : 'text-gray-700'} hover:${darkMode ? 'text-blue-400' : 'text-blue-600'}`
+                  }
+                  group
+                `}
+              >
+                {link.name}
+                <span className={`
+                  absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 
+                  ${darkMode ? 'bg-blue-400' : 'bg-blue-600'} 
+                  transition-all duration-300 group-hover:w-4/5
+                  ${activeLink === link.id ? 'w-4/5' : ''}
+                `}></span>
+              </a>
+              
+              {/* Hover Content Panel */}
+              {link.hoverContent && hoveredItem === link.id && (
+                <div className={`
+                  absolute left-0 mt-2 py-3 px-4 w-64 rounded-lg shadow-lg z-10
+                  transition-all duration-300 ease-in-out transform origin-top
+                  ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'}
+                `}>
+                  <div className="space-y-2">
+                    {link.hoverContent.map((item, index) => (
+                      <a 
+                        key={index} 
+                        href={item.href}
+                        className={`
+                          block px-3 py-2 rounded-md transition-all duration-200
+                          ${darkMode ? 
+                            'hover:bg-gray-700 hover:text-blue-400' : 
+                            'hover:bg-blue-50 hover:text-blue-600'
+                          }
+                        `}
+                      >
+                        {item.title}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
           
 

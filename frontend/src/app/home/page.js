@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Faq from "../../constants/FaqConstants";
 import WhatsAppButton from "../../constants/whatsapp";
+import Navbar from "@/layouts/navbar/Navbar";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,6 +29,8 @@ export default function Home() {
   };
 
   return (
+    <main>
+      <Navbar/>
     <div
       className={`min-h-screen ${darkMode ? "dark bg-[#000000]" : "bg-gray-50"}`}
     >
@@ -823,5 +826,6 @@ export default function Home() {
   </div>
 </footer>
     </div>
+    </main>
   );
 }
