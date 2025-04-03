@@ -9,6 +9,7 @@ import Footer from "@/layouts/footer/Footer";
 import Herosection from "../components/home/herosection";
 import Featuressection from "../components/home/featuressection";
 import Testonomial from "../components/home/testonomial";
+import Slider from "../slider/page";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -45,6 +46,7 @@ export default function Home() {
           <Herosection/>
           {/* Features Section */}
           <Featuressection/>
+          <Slider/>
           {/* Testimonials Section */}
           <Testonomial/>
           <Faq />
