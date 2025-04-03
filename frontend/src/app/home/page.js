@@ -10,6 +10,8 @@ import Herosection from "../components/home/herosection";
 import Featuressection from "../components/home/featuressection";
 import Testonomial from "../components/home/testonomial";
 import Slider from "../slider/page";
+import FreelamceBanner from "../components/home/join";
+import VideoPlayer from "../components/home/video";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -36,6 +38,7 @@ export default function Home() {
   };
 
   return (
+   
     <main>
       <Navbar/>
       <div
@@ -44,6 +47,7 @@ export default function Home() {
         <main>
           {/* Hero Section */}
           <Herosection/>
+          <VideoPlayer/>
           {/* Features Section */}
           <Featuressection/>
           <Slider/>
@@ -51,9 +55,13 @@ export default function Home() {
           <Testonomial/>
           <Faq />
           <WhatsAppButton />
+          <div className="px-10">
+          <FreelamceBanner/>
+          </div>
         </main>
         <Footer/>
       </div>
     </main>
+   
   );
 }

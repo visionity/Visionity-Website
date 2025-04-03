@@ -6,7 +6,7 @@ function Herosection() {
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <section className="pt-28 pb-20 px-4">
-    <div className="container mx-auto flex flex-col md:flex-row items-center">
+    <div className="container  mx-auto flex flex-col md:flex-row items-center">
       <div className="md:w-1/2 md:pr-12">
         <h1
           className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 ${
