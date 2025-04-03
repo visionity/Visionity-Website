@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FAQ.css'; 
+import './FAQ.css';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -7,6 +7,8 @@ const FAQ = () => {
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  const text = "At VISIONITY, we don&apos;t just develop software; we build partnerships.";
 
   const faqItems = [
     {
@@ -42,7 +44,6 @@ const FAQ = () => {
   return (
     <div className="faq-container">
       <h1>Frequently Asked Questions</h1>
-      
       <div className="faq-list">
         {faqItems.map((item, index) => (
           <div 
@@ -68,7 +69,7 @@ const FAQ = () => {
         <h3>What Our Clients Say</h3>
         <div className="company-description">
           <p>
-            At VISIONITY, we don't just develop software; we build partnerships. Our dynamic team works hand-in-hand with clients to deliver top web and mobile applications and tailored solutions that drive real business results. From ideation to deployment, we go above and beyond to ensure each project not only meets but exceeds expectations. VISIONITY is committed to transforming your vision into success through the power of technology.
+            At VISIONITY, we don&apos;t just develop software; we build partnerships. Our dynamic team works hand-in-hand with clients to deliver top web and mobile applications and tailored solutions that drive real business results. From ideation to deployment, we go above and beyond to ensure each project not only meets but exceeds expectations. VISIONITY is committed to transforming your vision into success through the power of technology.
           </p>
         </div>
       </div>

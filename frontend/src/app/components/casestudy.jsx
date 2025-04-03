@@ -1,6 +1,6 @@
 "use client"
 
-// components/ProjectSlider.jsx
+ components/ProjectSlider.jsx
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 

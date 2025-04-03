@@ -1,5 +1,5 @@
-// WhatsAppButton.js
 import React from 'react';
+import Image from 'next/image';  // ✅ Import Next.js Image component
 import './WhatsAppButton.css';
 
 const WhatsAppButton = () => {
@@ -11,9 +11,11 @@ const WhatsAppButton = () => {
   return (
     <div className="whatsapp-button">
       <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-        <img 
+        <Image 
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
           alt="WhatsApp" 
+          width={50}  // ✅ Add width
+          height={50} // ✅ Add height
         />
       </a>
     </div>

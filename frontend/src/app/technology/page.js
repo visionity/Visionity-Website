@@ -1,9 +1,9 @@
-import React from 'react'
+// import React from 'react'
 
-function technology() {
-  return (
-    <div>page</div>
-  )
-}
+// function technology() {
+//   return (
+//     <div>page</div>
+//   )
+// }
 
-export default technology
+// export default technology
