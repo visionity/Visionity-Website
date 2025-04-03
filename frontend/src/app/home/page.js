@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Faq from "../../constants/FaqConstants";
 import WhatsAppButton from "../../constants/whatsapp";
 import Navbar from "@/layouts/navbar/Navbar";
+import ProjectSlider from "../components/projectSlider";
+import Slider from "../components/slider/page";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -637,7 +639,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
+<Slider/>
         {/* CTA Section */}
         <section id="contact" className={`py-20 ${darkMode ? "bg-[#000000]" : "bg-white"}`}>
           <div className="container mx-auto px-4 text-center">
