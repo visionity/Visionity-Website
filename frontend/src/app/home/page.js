@@ -12,6 +12,8 @@ import Testonomial from "../components/home/testonomial";
 import Slider from "../slider/page";
 import FreelamceBanner from "../components/home/join";
 import VideoPlayer from "../components/home/video";
+import HeroSection1 from "../components/home/heroSection1";
+import IndustrySlider from "../components/home/industrySlider";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -42,7 +44,7 @@ export default function Home() {
     <main>
       <Navbar/>
       <div
-        className={`min-h-screen ${darkMode ? "dark bg-[#000000]" : "bg-gray-50"}`}
+        // className={`min-h-screen ${darkMode ? "dark bg-[#000000]" : "bg-gray-50"}`}
       >
         <main>
           {/* Hero Section */}
@@ -53,7 +55,9 @@ export default function Home() {
           <Slider/>
           {/* Testimonials Section */}
           <Testonomial/>
+          <HeroSection1/>
           <Faq />
+          <IndustrySlider/>
           <WhatsAppButton />
           <div className="px-10">
           <FreelamceBanner/>
