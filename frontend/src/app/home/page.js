@@ -50,7 +50,7 @@ export default function Home() {
           <Faq />
           <WhatsAppButton />
         </main>
-        {/* <Footer/> */}
+        <Footer/>
       </div>
     </main>
   );
