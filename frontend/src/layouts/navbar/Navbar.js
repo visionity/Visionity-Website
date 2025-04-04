@@ -139,8 +139,8 @@ const Navbar = ({ darkMode = false, toggleDarkMode }) => {
           <div className="flex items-center">
             <div className="font-bold text-xl tracking-tight relative cursor-pointer">
               <span className="text-2xl font-bold tracking-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">VISIO</span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">NITY</span>
+                <span className="bg-clip-text text-blue-800 ">VISIO</span>
+                <span className="bg-clip-text text-blue-800">NITY</span>
               </span>
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function Header() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <section className="relative bg-white py-48 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center">
               <div className="lg:w-1/2 lg:pr-12">
@@ -25,7 +25,7 @@ export default function Header() {
                   Hire Top web & Mobile app Developers for Your Web & Mobile Needs, our dedicated team of full-stack developers specializes in Web & Mobile App Development (Android & iOS). We deliver top-notch solutions using cutting-edge technologies like HTML5, Node.js, ReactJS, Next.js, MongoDB, and MySQL.
                 </p>
                 <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center">
-                  Consult Techpyro
+                  Consult Visionity
                 </button>
               </div>
               <div className="lg:w-1/2 mt-12 lg:mt-0">
@@ -62,7 +62,7 @@ export default function Header() {
         </section>
 
         {/* Tagline Section */}
-        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gray-50 py-32 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-blue-800">
               Innovative Partnerships, Infinite Possibilities

@@ -6,7 +6,6 @@ import WhatsAppButton from "../../constants/whatsapp";
 import Navbar from "@/layouts/navbar/Navbar";
 // import ProjectSlider from "../../components/projectSlider";
 import Footer from "@/layouts/footer/Footer";
-import Herosection from "../../components/home/herosection";
 import Featuressection from "../../components/home/featuressection";
 import Testonomial from "../../components/home/testonomial";
 import Slider from "../../constants/slider/Slider";
@@ -49,8 +48,6 @@ export default function Home() {
       >
         <main>
           <Header/>
-          {/* Hero Section */}
-          <Herosection/>
           <VideoPlayer/>
           {/* Features Section */}
           <Featuressection/>
