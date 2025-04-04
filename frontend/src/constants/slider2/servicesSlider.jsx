@@ -69,7 +69,7 @@ const ServicesSlider = ({ projects,servicestitle,projectstitle }) => {
 
   return (
     
-    <div className="w-full border-2 relative py-8">
+    <div className="w-full relative py-8">
       <h2 className="text-3xl font-bold mb-6">Our Services</h2>
     
       <div 

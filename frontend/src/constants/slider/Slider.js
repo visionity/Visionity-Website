@@ -134,7 +134,7 @@ export default function Slider() {
   ];
 
   return (
-    <div className="container border-2 mx-auto pl-3">
+    <div className="container mx-auto pl-3">
       <main className="py-8">
         <h1 className="text-4xl font-bold mb-8 text-center">Popular Services</h1>
         

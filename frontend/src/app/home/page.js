@@ -10,7 +10,7 @@ import Featuressection from "../../components/home/featuressection";
 import Testonomial from "../../components/home/testonomial";
 import Slider from "../../constants/slider/Slider";
 import FreelamceBanner from "../../components/home/join";
-import VideoPlayer from "../../components/home/video";
+// import VideoPlayer from "../../components/home/video";
 import HeroSection1 from "../../components/home/heroSection1";
 import IndustrySlider from "../../components/home/industrySlider";
 import Header from "@/components/header/Header";
@@ -48,7 +48,7 @@ export default function Home() {
       >
         <main>
           <Header/>
-          <VideoPlayer/>
+          {/* <VideoPlayer/> */}
           {/* Features Section */}
           <Featuressection/>
           <Slider/>

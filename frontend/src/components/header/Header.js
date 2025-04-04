@@ -43,16 +43,16 @@ export default function Header() {
             <a href="#" className="text-blue-600 hover:text-blue-700 transition-colors">
               <FaFacebookF size={24} />
             </a>
-            <a href="#" className="text-blue-600 hover:text-blue-700 transition-colors">
+            <a href="https://www.linkedin.com/company/visionityai/posts/?feedView=all" className="text-blue-600 hover:text-blue-700 transition-colors">
               <FaLinkedinIn size={24} />
             </a>
-            <a href="#" className="text-pink-500 hover:text-pink-600 transition-colors">
+            <a href="https://www.instagram.com/visionity.ai/" className="text-pink-500 hover:text-pink-600 transition-colors">
               <FaInstagram size={24} />
             </a>
             <a href="#" className="text-black hover:text-gray-700 transition-colors">
               <FaTwitter size={24} />
             </a>
-            <a href="#" className="text-red-600 hover:text-red-700 transition-colors">
+            <a href="https://www.youtube.com/@Visionity-ai" className="text-red-600 hover:text-red-700 transition-colors">
               <FaYoutube size={24} />
             </a>
             <a href="#" className="text-red-500 hover:text-red-600 transition-colors">
