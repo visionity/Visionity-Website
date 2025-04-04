@@ -14,6 +14,7 @@ import FreelamceBanner from "../components/home/join";
 import VideoPlayer from "../components/home/video";
 import HeroSection1 from "../components/home/heroSection1";
 import IndustrySlider from "../components/home/industrySlider";
+import Header from "@/components/header/Header";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -47,6 +48,7 @@ export default function Home() {
         // className={`min-h-screen ${darkMode ? "dark bg-[#000000]" : "bg-gray-50"}`}
       >
         <main>
+          <Header/>
           {/* Hero Section */}
           <Herosection/>
           <VideoPlayer/>
