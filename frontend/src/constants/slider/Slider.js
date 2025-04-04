@@ -1,7 +1,7 @@
 // import CasestudySlider from '../casestudy';
-import CasestudySlider from '../components/casestudy';
-import ProjectSlider from '../components/projectSlider';
-import ServicesSlider from '../components/servicesSlider';
+import CasestudySlider from '../slider2/casestudy';
+import ProjectSlider from '../slider2/projectSlider';
+import ServicesSlider from '../slider2/servicesSlider';
 // import ProjectSlider from '../projectSlider';
 // import ServicesSlider from '../servicesSlider';
 export default function Slider() {

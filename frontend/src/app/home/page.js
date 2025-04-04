@@ -6,14 +6,14 @@ import WhatsAppButton from "../../constants/whatsapp";
 import Navbar from "@/layouts/navbar/Navbar";
 import ProjectSlider from "../components/projectSlider";
 import Footer from "@/layouts/footer/Footer";
-import Herosection from "../components/home/herosection";
-import Featuressection from "../components/home/featuressection";
-import Testonomial from "../components/home/testonomial";
-import Slider from "../slider/page";
+import Herosection from "../../components/home/herosection";
+import Featuressection from "../../components/home/featuressection";
+import Testonomial from "../../components/home/testonomial";
+import Slider from "../../constants/slider/Slider";
 import FreelamceBanner from "../components/home/join";
-import VideoPlayer from "../components/home/video";
-import HeroSection1 from "../components/home/heroSection1";
-import IndustrySlider from "../components/home/industrySlider";
+import VideoPlayer from "../../components/home/video";
+import HeroSection1 from "../../components/home/heroSection1";
+import IndustrySlider from "../../components/home/industrySlider";
 import Header from "@/components/header/Header";
 
 export default function Home() {
