@@ -12,15 +12,18 @@ const Footer = () => {
             <h1 className="text-3xl font-bold text-blue-800">Newsletter</h1>
           </div>
           <div className="flex mt-4 md:mt-0">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 rounded-l-md border border-gray-300 focus:outline-none w-72"
-            />
-            <button className="bg-blue-900 text-white px-6 py-2 rounded-r-md hover:bg-blue-800">
-              Join
-            </button>
-          </div>
+  <input
+    type="email"
+    placeholder="Enter your email"
+    className="px-4 py-2 rounded-l-md border border-gray-300 w-72
+               focus:outline-none focus:border-gray-500 focus:ring-2 focus:ring-gray-300
+               transition duration-300"
+  />
+  <button className="bg-blue-900 text-white px-6 py-2 rounded-r-md hover:bg-blue-800 transition duration-300">
+    Join
+  </button>
+</div>
+
         </div>
 
         {/* Footer Main Content */}

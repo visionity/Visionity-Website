@@ -56,10 +56,11 @@
   .testimonials-section {
     margin-top: 50px;
     text-align: left;
+    
   }
   
   .testimonials-section h2 {
-    color: #666;
+    color: #ff810f;
     font-size: 14px;
     letter-spacing: 1px;
     margin-bottom: 5px;
@@ -83,7 +84,7 @@
   
   /* Style for alternating question formatting */
   .faq-item:nth-child(odd) h3 {
-    font-weight: normal;
+    font-weight: bold;
   }
   
   .faq-item:nth-child(even) h3 {

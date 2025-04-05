@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FAQ.css';
+import Testinomials from './Testinomials';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -64,7 +65,7 @@ const FAQ = () => {
         ))}
       </div>
 
-      <div className="testimonials-section">
+      {/* <div className="testimonials-section">
         <h2>TESTIMONIALS</h2>
         <h3>What Our Clients Say</h3>
         <div className="company-description">
@@ -72,7 +73,8 @@ const FAQ = () => {
             At VISIONITY, we don&apos;t just develop software; we build partnerships. Our dynamic team works hand-in-hand with clients to deliver top web and mobile applications and tailored solutions that drive real business results. From ideation to deployment, we go above and beyond to ensure each project not only meets but exceeds expectations. VISIONITY is committed to transforming your vision into success through the power of technology.
           </p>
         </div>
-      </div>
+      </div> */}
+      <Testinomials></Testinomials>
     </div>
   );
 };
