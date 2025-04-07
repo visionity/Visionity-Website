@@ -4,7 +4,7 @@ import ProjectSlider from '../slider2/projectSlider';
 import ServicesSlider from '../slider2/servicesSlider';
 // import ProjectSlider from '../projectSlider';
 // import ServicesSlider from '../servicesSlider';
-export default function Slider() {
+export default function Slider({ darkMode }) {
   // Example projects data - replace with your actual projects
   const projects = [
     {
@@ -135,13 +135,13 @@ export default function Slider() {
 
   return (
     <div className="container mx-auto pl-3">
-      <main className="py-8">
-        <h1 className="text-4xl font-bold mb-8 text-center">Popular Services</h1>
-        
-        <ServicesSlider projects={services} />
-        <ProjectSlider projects={projects} />
-        <CasestudySlider projects={projects} />
-      </main>
-    </div>
+    <main className={`py-8 rounded-xl ${darkMode ? 'bg-[#000000] text-white' : 'bg-white text-black'}`}>
+      <h1 className="text-4xl font-bold mb-8 text-center">Popular Services</h1>
+      
+      <ServicesSlider projects={services} darkMode={darkMode} />
+      <ProjectSlider projects={projects} darkMode={darkMode} />
+      <CasestudySlider projects={projects} darkMode={darkMode} />
+    </main>
+  </div>
   );
 }

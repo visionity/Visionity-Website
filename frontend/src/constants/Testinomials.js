@@ -1,53 +1,71 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./Testinomials.css";
 
 const testimonials = [
   {
-    text: "I discovered that design thinking puts humans at the centre of problem solving. It helps you to understand the real underlying issues, so you can come up with solutions that solve problems in a more sustainable way.",
+    text: "I discovered that design thinking puts humans at the centre of problem solving...",
     author: "Parent",
     org: "INTO THE BRAVE NEW WORLD!",
     icon: "🌸",
   },
   {
-    text: "People need to understand that creativity is something they should want in their lives. It’s a way of looking at the world. It makes them observant and curious. It’s a way of solving problems in their lives and in the world around them.",
+    text: "People need to understand that creativity is something they should want in their lives...",
     author: "Partner",
     org: "CREATIVITY CAN SAVE THE WORLD",
     icon: "❤️",
   },
   {
-    text: "I learned it’s important to let students think with their hands and explore. It gives them agency. I was surprised to discover that it engaged students of various aptitudes, and even those who normally show little interest.",
+    text: "I learned it’s important to let students think with their hands and explore...",
     author: "MOE Educator",
     org: "YISHUN TOWN SECONDARY SCHOOL",
     icon: "📘",
   },
 ];
 
-export default function Testinomials() {
+export default function Testimonials({ darkMode }) {
   return (
-    <div className="bg-yellow-400 min-h-screen flex items-center justify-center p-8">
-      <div className="overflow-hidden w-full max-w-7xl relative group">
-        <h2 className="text-2xl font-bold text-center mb-6">Hear what our happy participants have to say.</h2>
-        <motion.div
-          className="flex space-x-6 animate-scroll group-hover:[animation-play-state:paused]"
-        >
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="min-w-[300px] max-w-sm p-6 bg-white rounded-2xl shadow-md"
-            >
-              <p className="text-black mb-4">“{item.text}”</p>
-              <div className="text-sm font-medium text-gray-700 flex items-center gap-2">
-                <span>{item.icon}</span>
-                <div>
-                  <div>{item.author}</div>
-                  <div className="text-xs text-gray-500">{item.org}</div>
+    <div className={`${darkMode ? "dark" : ""}`}>
+      <div className="bg-yellow-400 dark:bg-neutral-900 min-h-screen flex items-center justify-center px-4 sm:px-8 py-12">
+        <div className="w-full max-w-7xl overflow-hidden relative group">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-10 text-black dark:text-white">
+            Hear what our happy participants have to say.
+          </h2>
+
+          <motion.div
+            className="flex space-x-6 animate-scroll group-hover:[animation-play-state:paused]"
+            style={{ animation: "scroll 25s linear infinite" }}
+          >
+            {testimonials.map((item, index) => (
+              <div
+                key={index}
+                className="min-w-[280px] max-w-sm p-6 sm:p-8 bg-white dark:bg-neutral-800 rounded-2xl shadow-xl transition-transform transform hover:scale-105"
+              >
+                <p className="mb-4 leading-relaxed text-sm sm:text-base text-black dark:text-white">
+                  “{item.text}”
+                </p>
+                <div className="text-sm font-medium flex items-center gap-3">
+                  <span className="text-xl">{item.icon}</span>
+                  <div>
+                    <div className="text-black dark:text-white">{item.author}</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">{item.org}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
     </div>
   );
 }

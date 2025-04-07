@@ -1,11 +1,17 @@
 // pages/index.js
 import Head from 'next/head';
-import Image from 'next/image';
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter, FaYoutube, FaPinterest, FaWhatsapp } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+  FaPinterest,
+} from 'react-icons/fa';
 
-export default function Header() {
+export default function HomePage({ darkMode }) {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={darkMode ? 'min-h-screen bg-[#000000] text-white' : 'min-h-screen bg-gray-50 text-black'}>
       <Head>
         <title>Top Web & Mobile App Development Company</title>
         <meta name="description" content="Hire top web & mobile app developers" />
@@ -14,14 +20,14 @@ export default function Header() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-white py-48 px-4 sm:px-6 lg:px-8">
+        <section className={darkMode ? 'relative bg-[#000000] py-48 px-4 sm:px-6 lg:px-8' : 'relative bg-white py-48 px-4 sm:px-6 lg:px-8'}>
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center">
               <div className="lg:w-1/2 lg:pr-12">
-                <h1 className="text-4xl sm:text-5xl font-bold text-blue-800 mb-6">
+                <h1 className={darkMode ? 'text-4xl sm:text-5xl font-bold text-white mb-6' : 'text-4xl sm:text-5xl font-bold text-blue-800 mb-6'}>
                   Top Web & Mobile App Development Company
                 </h1>
-                <p className="text-lg text-gray-700 mb-8">
+                <p className={darkMode ? 'text-lg text-gray-300 mb-8' : 'text-lg text-gray-700 mb-8'}>
                   Hire Top web & Mobile app Developers for Your Web & Mobile Needs, our dedicated team of full-stack developers specializes in Web & Mobile App Development (Android & iOS). We deliver top-notch solutions using cutting-edge technologies like HTML5, Node.js, ReactJS, Next.js, MongoDB, and MySQL.
                 </p>
                 <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center">
@@ -40,37 +46,35 @@ export default function Header() {
 
           {/* Social Media Icons */}
           <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
-            <a href="#" className="text-blue-600 hover:text-blue-700 transition-colors">
+            <a href="#" className="text-blue-400 hover:text-blue-500 transition-colors">
               <FaFacebookF size={24} />
             </a>
-            <a href="https://www.linkedin.com/company/visionityai/posts/?feedView=all" className="text-blue-600 hover:text-blue-700 transition-colors">
+            <a href="https://www.linkedin.com/company/visionityai/posts/?feedView=all" className="text-blue-400 hover:text-blue-500 transition-colors">
               <FaLinkedinIn size={24} />
             </a>
-            <a href="https://www.instagram.com/visionity.ai/" className="text-pink-500 hover:text-pink-600 transition-colors">
+            <a href="https://www.instagram.com/visionity.ai/" className="text-pink-400 hover:text-pink-500 transition-colors">
               <FaInstagram size={24} />
             </a>
-            <a href="#" className="text-black hover:text-gray-700 transition-colors">
+            <a href="#" className="text-white hover:text-gray-400 transition-colors">
               <FaTwitter size={24} />
             </a>
-            <a href="https://www.youtube.com/@Visionity-ai" className="text-red-600 hover:text-red-700 transition-colors">
+            <a href="https://www.youtube.com/@Visionity-ai" className="text-red-500 hover:text-red-600 transition-colors">
               <FaYoutube size={24} />
             </a>
-            <a href="#" className="text-red-500 hover:text-red-600 transition-colors">
+            <a href="#" className="text-red-400 hover:text-red-500 transition-colors">
               <FaPinterest size={24} />
             </a>
           </div>
         </section>
 
         {/* Tagline Section */}
-        <section className="bg-gray-50 py-32 px-4 sm:px-6 lg:px-8">
+        <section className={darkMode ? 'bg-[#000000] py-32 px-4 sm:px-6 lg:px-8' : 'bg-gray-50 py-32 px-4 sm:px-6 lg:px-8'}>
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-blue-800">
+            <h2 className={darkMode ? 'text-4xl font-bold text-white' : 'text-4xl font-bold text-blue-800'}>
               Innovative Partnerships, Infinite Possibilities
             </h2>
           </div>
         </section>
-
-       
       </main>
     </div>
   );
