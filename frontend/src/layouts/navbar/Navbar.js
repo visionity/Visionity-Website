@@ -2,15 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-const Navbar = ({ darkMode, onToggleDarkMode }) => {
+const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
-
-  const handleEnterprise = () => {
-    router.push('/caseStudy/enterprise');
-  }
+  const router = useRouter();
   
   // Handle scroll effect
   useEffect(() => {
@@ -32,11 +29,11 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
       href: '#services', 
       id: 'services',
       hoverContent: [
-        { title: 'Web Application', href: '#web-app' },
-        { title: 'Mobile App Development', href: '#mobile-app' },
-        { title: 'Full Stack Development', href: '#fullstack' },
-        { title: 'Digital Marketing', href: '#digital-marketing' },
-        { title: 'UX/UI Design', href: '#uxui' }
+        { title: 'Web Development', onClick: ()=>{router.push('/services/web-development')} },
+        { title: 'Mobile App Development', onClick: ()=>{router.push('/services/mobile-app-development')} },
+        { title: 'Full Stack Development', onClick: ()=>{router.push('/services/full-stack-development')} },
+        { title: 'Digital Marketing',onClick: ()=>{router.push('/services/digital-marketing')} },
+        { title: 'UX/UI Design',onClick: ()=>{router.push('/services/ui&ux-development')} }
       ]
     },
     { 
@@ -44,11 +41,11 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
       href: '#technology', 
       id: 'technology',
       hoverContent: [
-        { title: 'React.js', href: '#react' },
-        { title: 'Next.js', href: '#nextjs' },
-        { title: 'Node.js', href: '#nodejs' },
-        { title: 'AWS', href: '#aws' },
-        { title: 'Blockchain', href: '#blockchain' }
+        { title: 'React.js', onClick: ()=>{router.push('/technology/reactjs')} },
+        { title: 'Next.js', onClick: ()=>{router.push('/technology/nextjs')} },
+        { title: 'Node.js', onClick: ()=>{router.push('/technology/nodejs')} },
+        { title: 'AWS', onClick: ()=>{router.push('/technology/aws')} },
+        { title: 'Blockchain', onClick: ()=>{router.push('/technology/blockchain')} }
       ]
     },
     { 
@@ -56,11 +53,11 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
       href: '#industry', 
       id: 'industry',
       hoverContent: [
-        { title: 'Healthcare', href: '#healthcare' },
-        { title: 'Finance', href: '#finance' },
-        { title: 'Education', href: '#education' },
-        { title: 'E-commerce', href: '#ecommerce' },
-        { title: 'Manufacturing', href: '#manufacturing' }
+        { title: 'Healthcare', onClick: ()=>{router.push('/industry/health-care')} },
+        { title: 'Finance', onClick: ()=>{router.push('/industry/finance')} },
+        { title: 'Education', onClick: ()=>{router.push('/industry/education')}},
+        { title: 'E-commerce',onClick: ()=>{router.push('/industry/ecommerce')} },
+        { title: 'Manufacturing',onClick: ()=>{router.push('/industry/manufacturing')} }
       ] 
     },
     { 
@@ -68,10 +65,10 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
       href: '#caseStudy', 
       id: 'caseStudy',
       hoverContent: [
-        { title: 'Enterprise Solutions', onClick: () => handleEnterprise() },
-        { title: 'Startup Projects', href: '#startup' },
-        { title: 'Mobile Applications', href: '#mobile-cases' },
-        { title: 'Web Platforms', href: '#web-platforms' }
+        { title: 'Enterprise Solutions', onClick: () => router.push('/caseStudy/enterprise') },
+        { title: 'Startup Projects', onClick: () => router.push('/caseStudy/startup-projects') },
+        { title: 'Mobile Applications',  onClick: () => router.push('/caseStudy/mobile-application') },
+        { title: 'Web Platforms', onClick: () => router.push('/caseStudy/web-platforms') }
       ] 
     },
     { 
@@ -79,9 +76,9 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
       href: '#contact', 
       id: 'contact',
       hoverContent: [
-        { title: 'Get Quote', href: '#quote' },
-        { title: 'Support', href: '#support' },
-        { title: 'Partnership', href: '#partnership' }
+        { title: 'Get Quote',  onClick: () => router.push('/contact/quote') },
+        { title: 'Support', onClick: () => router.push('/contact/support') },
+        { title: 'Partnership',onClick: () => router.push('/contact/partnership') }
       ] 
     }
   ];
@@ -93,7 +90,6 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
       ${darkMode ? 'bg-[#000000] text-white' : 'bg-white text-black'}
     `}>
       <div className="max-w-7xl mx-auto">
-        
         {/* Main navbar */}
         <div className="flex items-center justify-between py-4 px-4 md:px-6">
           {/* Logo */}
@@ -142,16 +138,16 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
                     `}>
                       <div className="space-y-1">
                         {link.hoverContent.map((item, index) => (
-                          <a 
+                          <div 
                             key={index} 
-                            href={item.href}
-                            className={`block px-3 py-2 text-sm rounded-md transition-all duration-200 
-                            ${darkMode ? 
-                              'hover:bg-gray-700 hover:text-blue-400' : 
-                              'hover:bg-blue-50 hover:text-blue-600'}`}
+                            onClick={item.onClick}
+                            className={`
+                              block px-3 py-2 text-sm rounded-md transition-all duration-200 cursor-pointer
+                              ${darkMode ? 'hover:bg-blue-900 hover:text-blue-300' : 'hover:bg-blue-50 hover:text-blue-600'}
+                            `}
                           >
                             {item.title}
-                          </a>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -258,13 +254,16 @@ const Navbar = ({ darkMode, onToggleDarkMode }) => {
                 {link.hoverContent && activeLink === link.id && (
                   <div className={`ml-4 mt-2 space-y-1 border-l-2 ${darkMode ? 'border-blue-500 pl-4' : 'border-blue-500 pl-4'}`}>
                     {link.hoverContent.map((item, index) => (
-                      <a 
+                      <div 
                         key={index} 
-                        href={item.href}
-                        className={`block py-2 text-sm ${darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}`}
+                        onClick={item.onClick}
+                        className={`
+                          block py-2 text-sm cursor-pointer
+                          ${darkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'}
+                        `}
                       >
                         {item.title}
-                      </a>
+                      </div>
                     ))}
                   </div>
                 )}
