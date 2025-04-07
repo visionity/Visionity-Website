@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Footer = ({ darkMode }) => {
   return (
@@ -30,20 +31,28 @@ const Footer = ({ darkMode }) => {
 
             {/* Logo and Social */}
             <div>
-              <div className="mb-4">
-                <img src="images/lightlogo.png" alt="Visionity Logo" className="w-24" style={{ width: '70%', height: '100%', display: 'block', maxWidth: '100%' }} />
-              </div>
-              <p className="font-semibold mb-4">Top IT Consulting Company Delivering</p>
-              <p className="font-semibold mb-4">Custom Innovative Solutions</p>
-              <div className="flex gap-3 text-2xl">
-                <a href="#"><i className="fab fa-facebook text-blue-600"></i></a>
-                <a href="#"><i className="fab fa-linkedin text-blue-700"></i></a>
-                <a href="#"><i className="fab fa-instagram text-pink-500"></i></a>
-                <a href="#"><i className="fab fa-x-twitter text-black dark:text-white"></i></a>
-                <a href="#"><i className="fab fa-youtube text-red-600"></i></a>
-                <a href="#"><i className="fab fa-pinterest text-red-500"></i></a>
-              </div>
-            </div>
+  <div className="mb-4 w-full" style={{ width: '70%', height: 'auto', maxWidth: '100%' }}>
+    <Image
+      src="/images/lightlogo.png"
+      alt="Visionity Logo"
+      width={200} // adjust as per actual logo size
+      height={100} // adjust as per actual logo size
+      className="w-24"
+      style={{ display: 'block' }}
+    />
+  </div>
+  <p className="font-semibold mb-4">Top IT Consulting Company Delivering</p>
+  <p className="font-semibold mb-4">Custom Innovative Solutions</p>
+  <div className="flex gap-3 text-2xl">
+    <a href="#"><i className="fab fa-facebook text-blue-600"></i></a>
+    <a href="#"><i className="fab fa-linkedin text-blue-700"></i></a>
+    <a href="#"><i className="fab fa-instagram text-pink-500"></i></a>
+    <a href="#"><i className="fab fa-x-twitter text-black dark:text-white"></i></a>
+    <a href="#"><i className="fab fa-youtube text-red-600"></i></a>
+    <a href="#"><i className="fab fa-pinterest text-red-500"></i></a>
+  </div>
+</div>
+
 
             {/* Company */}
             <div>

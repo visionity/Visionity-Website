@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from 'next/image';
 import Footer from "@/layouts/footer/Footer";
 import Navbar from "@/layouts/navbar/Navbar";
 import Header from "../header/Header";
@@ -81,27 +82,29 @@ const appData = [
 ];
 
 const Card = ({ title, image, tags }) => (
-    <div className="bg-white rounded-xl shadow-md p-4 w-full sm:w-[30%] flex flex-col">
-      <div className="w-full aspect-[4/3] overflow-hidden rounded-md mb-4">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag, idx) => (
-          <span
-            key={idx}
-            className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
+  <div className="bg-white rounded-xl shadow-md p-4 w-full sm:w-[30%] flex flex-col">
+    <div className="w-full aspect-[4/3] relative overflow-hidden rounded-md mb-4">
+      <Image
+        src={image}
+        alt={title}
+        layout="fill"
+        objectFit="cover"
+        className="rounded-md"
+      />
     </div>
-  );
+    <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <div className="flex flex-wrap gap-2">
+      {tags.map((tag, idx) => (
+        <span
+          key={idx}
+          className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+);
   
 
 const CardList = () => (
