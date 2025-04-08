@@ -29,7 +29,7 @@ function Testonomial({ darkMode }) {
           {[
             {
               quote:
-                "Visionity's computer vision solution has revolutionized our quality control process, reducing defects by 78% and increasing productivity.",
+                "Visionity' computer vision solution has revolutionized our quality control process, reducing defects by 78% and increasing productivity.",
               name: 'Rahul Sharma',
               position: 'CTO, TechInnovate',
             },
@@ -43,7 +43,7 @@ function Testonomial({ darkMode }) {
               quote:
                 "The predictive analytics platform provided by Visionity has transformed how we forecast demand, resulting in 42% less inventory waste.",
               name: 'Amit Singh',
-              position: 'Supply Chain Director, GlobalFoods',
+              position: 'upply Chain Director, GlobalFoods',
             },
           ].map((testimonial, index) => (
             <div

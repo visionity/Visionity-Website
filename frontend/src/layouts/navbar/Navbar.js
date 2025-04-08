@@ -19,15 +19,15 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
       }
     };
     
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('croll', handleScroll);
+    return () => window.removeEventListener('croll', handleScroll);
   }, []);
   
   const navLinks = [
     { 
       name: 'SERVICES', 
       href: '#services', 
-      id: 'services',
+      id: 'ervices',
       hoverContent: [
         { title: 'Web Development', onClick: ()=>{router.push('/services/web-development')} },
         { title: 'Mobile App Development', onClick: ()=>{router.push('/services/mobile-app-development')} },
@@ -66,18 +66,18 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
       id: 'caseStudy',
       hoverContent: [
         { title: 'Enterprise Solutions', onClick: () => router.push('/caseStudy/enterprise') },
-        { title: 'Startup Projects', onClick: () => router.push('/caseStudy/startup-projects') },
+        { title: 'tartup Projects', onClick: () => router.push('/caseStudy/startup-projects') },
         { title: 'Mobile Applications',  onClick: () => router.push('/caseStudy/mobile-application') },
         { title: 'Web Platforms', onClick: () => router.push('/caseStudy/web-platforms') }
       ] 
     },
     { 
-      name: 'CONTACT US', 
+      name: 'CONTACT', 
       href: '#contact', 
       id: 'contact',
       hoverContent: [
-        { title: 'Get Quote',  onClick: () => router.push('/contact/quote') },
-        { title: 'Support', onClick: () => router.push('/contact/support') },
+        { title: 'Contact Us',  onClick: () => router.push('/contact/contact-us') },
+        { title: 'upport', onClick: () => router.push('/contact/support') },
         { title: 'Partnership',onClick: () => router.push('/contact/partnership') }
       ] 
     }
