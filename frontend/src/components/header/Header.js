@@ -46,16 +46,16 @@ export default function HomePage({ darkMode }) {
 
           {/* Social Media Icons */}
           <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
-            <a href="#" className="text-blue-400 hover:text-blue-500 transition-colors">
+            <a href="#" className="text-blue-500 hover:text-blue-600 transition-colors">
               <FaFacebookF size={24} />
             </a>
-            <a href="https://www.linkedin.com/company/visionityai/posts/?feedView=all" className="text-blue-400 hover:text-blue-500 transition-colors">
+            <a href="https://www.linkedin.com/company/visionityai/posts/?feedView=all" className="text-blue-500 hover:text-blue-600 transition-colors">
               <FaLinkedinIn size={24} />
             </a>
             <a href="https://www.instagram.com/visionity.ai/" className="text-pink-400 hover:text-pink-500 transition-colors">
               <FaInstagram size={24} />
             </a>
-            <a href="#" className="text-white hover:text-gray-400 transition-colors">
+            <a href="#" className="text-blue-500 hover:text-blue-600 transition-colors">
               <FaTwitter size={24} />
             </a>
             <a href="https://www.youtube.com/@Visionity-ai" className="text-red-500 hover:text-red-600 transition-colors">

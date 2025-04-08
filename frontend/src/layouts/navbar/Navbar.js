@@ -32,8 +32,8 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
         { title: 'Web Development', onClick: ()=>{router.push('/services/web-development')} },
         { title: 'Mobile App Development', onClick: ()=>{router.push('/services/mobile-app-development')} },
         { title: 'Full Stack Development', onClick: ()=>{router.push('/services/full-stack-development')} },
-        { title: 'Digital Marketing',onClick: ()=>{router.push('/services/digital-marketing')} },
-        { title: 'UX/UI Design',onClick: ()=>{router.push('/services/ui&ux-development')} }
+        { title: 'Digital Marketing', onClick: ()=>{router.push('/services/digital-marketing')} },
+        { title: 'UX/UI Design', onClick: ()=>{router.push('/services/ui&ux-development')} }
       ]
     },
     { 
@@ -96,8 +96,7 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
           <div className="flex items-center">
             <div className="font-bold text-xl tracking-tight relative cursor-pointer">
               <span className="text-2xl md:text-3xl font-bold tracking-tight">
-                <span className={darkMode ? 'text-blue-400' : 'text-blue-800'}>VISIO</span>
-                <span className={darkMode ? 'text-blue-400' : 'text-blue-800'}>NITY</span>
+                <span className={darkMode ? 'text-blue-400' : 'text-blue-800'} onClick = {()=>router.push('/')}>VISIONITY</span>
               </span>
             </div>
           </div>
