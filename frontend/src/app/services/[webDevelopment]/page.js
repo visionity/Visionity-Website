@@ -1,9 +1,12 @@
- import React from 'react'
+ import WebDevelopment from '@/components/sevices/webDevelopment/WebDevelopment'
+import React from 'react'
  
  const page = () => {
    return (
      <div>
-       h
+       <Navbar/>
+      <WebDevelopment/>
+       <Footer/>
      </div>
    )
  }
