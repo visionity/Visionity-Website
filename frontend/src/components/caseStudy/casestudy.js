@@ -3,11 +3,12 @@ import React from "react";
 import Footer from "@/layouts/footer/Footer";
 import Navbar from "@/layouts/navbar/Navbar";
 import Header from "../header/Header";
+import Image from 'next/image'
 // import { useRouter } from 'next/navigation';
 
 const appData = [
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
@@ -25,55 +26,55 @@ const appData = [
     tags: ["Android", "Flutter", "Node JS", "iOS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],
   },
   {
-    title: "Papa John's Pizza Delivery App",
+    title: "Papa John Pizza Delivery App",
     image:
       "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load",
     tags: ["Android", "iOS", "Node JS"],

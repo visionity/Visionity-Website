@@ -1,17 +1,29 @@
 // pages/index.js
 import React from 'react';
-import { Phone, Server, Code, Globe, CheckCircle, Award, Users, Activity, Zap, MessageSquare } from 'lucide-react';
+import Head from 'next/head';
+import Image from 'next/image';
+import {
+  Phone, Server, Code, Globe, CheckCircle,
+  Award, Users, Activity, Zap, MessageSquare
+} from 'lucide-react';
 
 export default function WebDevelopment() {
   return (
     <div className="font-sans">
+      <Head>
+        <title>Mobile App Development Company | YourBrand</title>
+        <meta name="description" content="Custom iOS, Android, and cross-platform mobile apps tailored to your business needs." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Mobile App Development Company</h1>
-              <p className="text-xl mb-8">Transform your business with custom mobile applications designed for today's digital landscape.</p>
+              <p className="text-xl mb-8">Transform your business with custom mobile applications designed for today&apos;s digital landscape.</p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <button className="bg-white text-blue-800 font-semibold py-3 px-6 rounded-md hover:bg-gray-100 transition">
                   Get a Free Quote
@@ -22,7 +34,13 @@ export default function WebDevelopment() {
               </div>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <img src="/api/placeholder/400/450" alt="Mobile app development" className="h-96 object-contain" />
+              <Image
+                src="/images/mobile-app-development.png"
+                alt="Mobile app development"
+                width={400}
+                height={450}
+                className="h-96 object-contain"
+              />
             </div>
           </div>
         </div>

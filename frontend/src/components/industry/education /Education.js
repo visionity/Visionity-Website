@@ -286,7 +286,7 @@ export default function Education() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {['React Native', 'Flutter', 'iOS', 'Android', 'Node.js', 'Firebase', 'AWS', 'MongoDB', 'GraphQL', 'Kotlin', 'Swift', 'Python'].map((tech, index) => (
+            {['React Native', 'Flutter', 'iOS', 'Android', 'Node.js', 'Firebase', 'AWS', 'MongoDB', 'GraphQL', 'Kotlin', 'wift', 'Python'].map((tech, index) => (
               <div key={index} className="bg-white rounded-lg p-4 flex items-center justify-center shadow-sm hover:shadow-md transition duration-300 h-24">
                 <p className="text-lg font-medium text-gray-700">{tech}</p>
               </div>
@@ -315,7 +315,7 @@ export default function Education() {
               'Language Learning Providers',
               'Online Learning Platforms',
               'Test Preparation Services',
-              'Special Education'
+              'pecial Education'
             ].map((industry, index) => (
               <div key={index} className="bg-blue-50 rounded-lg p-6 hover:bg-blue-100 transition duration-300">
                 <h3 className="text-lg font-semibold text-gray-800">{industry}</h3>
@@ -331,7 +331,7 @@ export default function Education() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Case Studies</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Explore our successful education app development projects and learn how we've helped our clients achieve their goals.
+              Explore our successful education app development projects and learn how we&apos;ve helped our clients achieve their goals.
             </p>
           </div>
 
@@ -398,7 +398,7 @@ export default function Education() {
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Educational Approach?</h2>
             <p className="text-xl mb-8">
-              Let's collaborate to create an education app that enhances learning experiences and drives better outcomes.
+              Let &apos;s collaborate to create an education app that enhances learning experiences and drives better outcomes.
             </p>
             <button className="bg-white text-blue-800 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition duration-300">
               Schedule a Free Consultation

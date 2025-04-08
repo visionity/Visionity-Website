@@ -113,7 +113,7 @@ function HeroSection1({ darkMode }) {
         {/* Scroll to Top Button */}
         <div className="hidden md:block fixed bottom-6 right-6">
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'mooth' })}
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-700 text-white flex items-center justify-center shadow-lg hover:bg-indigo-800 transition-colors"
             aria-label="Scroll to top"
           >

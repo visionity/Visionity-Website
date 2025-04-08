@@ -56,7 +56,7 @@ const FAQ = ({ darkMode }) => {
               onClick={() => toggleFAQ(index)}
               className={`border rounded-lg px-5 py-4 cursor-pointer transition-all duration-300 ${
                 darkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-300 bg-gray-100'
-              } ${activeIndex === index ? 'shadow-lg' : 'hover:shadow-md'}`}
+              } ${activeIndex === index ? 'hadow-lg' : 'hover:shadow-md'}`}
             >
               <div className="flex justify-between items-center">
                 <h3 className="text-base sm:text-lg font-medium">{item.question}</h3>
