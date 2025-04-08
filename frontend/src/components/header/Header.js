@@ -11,27 +11,27 @@ import {
 
 export default function HomePage({ darkMode }) {
   return (
-    <div className={darkMode ? 'min-h-screen bg-[#000000] text-white' : 'min-h-screen bg-gray-50 text-black'}>
+    <div className={darkMode ? 'min-h-screen bg-gray-900 text-white' : 'min-h-screen bg-gray-50 text-black'}>
       <Head>
-        <title>Top Web & Mobile App Development Company</title>
-        <meta name="description" content="Hire top web & mobile app developers" />
+        <title>Build the Future with Custom Software Solutions</title>
+        <meta name="description" content="Empowering businesses with modern software and mobile solutions" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         {/* Hero Section */}
-        <section className={darkMode ? 'relative bg-[#000000] py-48 px-4 sm:px-6 lg:px-8' : 'relative bg-white py-48 px-4 sm:px-6 lg:px-8'}>
+        <section className={darkMode ? 'relative bg-gray-900 py-48 px-4 sm:px-6 lg:px-8' : 'relative bg-white py-48 px-4 sm:px-6 lg:px-8'}>
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center">
               <div className="lg:w-1/2 lg:pr-12">
                 <h1 className={darkMode ? 'text-4xl sm:text-5xl font-bold text-white mb-6' : 'text-4xl sm:text-5xl font-bold text-blue-800 mb-6'}>
-                  Top Web & Mobile App Development Company
+                  Build the Future with Custom Software Solutions
                 </h1>
                 <p className={darkMode ? 'text-lg text-gray-300 mb-8' : 'text-lg text-gray-700 mb-8'}>
-                  Hire Top web & Mobile app Developers for Your Web & Mobile Needs, our dedicated team of full-stack developers specializes in Web & Mobile App Development (Android & iOS). We deliver top-notch solutions using cutting-edge technologies like HTML5, Node.js, ReactJS, Next.js, MongoDB, and MySQL.
+                  We help startups and enterprises craft scalable, secure, and performance-driven applications using technologies like React, Next.js, Node.js, MongoDB, and cloud platforms. Unlock your business potential with us.
                 </p>
                 <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-full inline-flex items-center">
-                  Consult Visionity
+                  Get a Free Consultation
                 </button>
               </div>
               <div className="lg:w-1/2 mt-12 lg:mt-0">
@@ -68,13 +68,7 @@ export default function HomePage({ darkMode }) {
         </section>
 
         {/* Tagline Section */}
-        <section className={darkMode ? 'bg-[#000000] py-32 px-4 sm:px-6 lg:px-8' : 'bg-gray-50 py-32 px-4 sm:px-6 lg:px-8'}>
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className={darkMode ? 'text-4xl font-bold text-white' : 'text-4xl font-bold text-blue-800'}>
-              Innovative Partnerships, Infinite Possibilities
-            </h2>
-          </div>
-        </section>
+      
       </main>
     </div>
   );

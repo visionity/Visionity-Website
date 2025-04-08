@@ -2,15 +2,23 @@ import React from 'react';
 
 const FreelamceBanner = ({ darkMode }) => {
   return (
-    <div className={`${darkMode ? "dark" : ""}`}>
-      <div className="w-full mb-10 rounded-xl px-6 sm:px-10 md:px-20 py-16 flex flex-col items-center justify-center bg-[#3D1520] dark:bg-neutral-900 transition-colors duration-300">
-        <h1 className="text-white dark:text-white text-3xl sm:text-4xl md:text-5xl font-medium text-center mb-8">
-          Visionity services at your <span className="text-[#FF6B35]">fingertips</span>
-        </h1>
+    <div className={`${darkMode ? 'dark' : ''}`}>
+      <div className={`w-full mb-10 rounded-xl px-4 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16 flex flex-col items-center justify-center 
+        ${darkMode ? 'bg-gray-900 text-white' : 'bg-[#3D1520] text-white'} 
+        transition-colors duration-300`}>
+        
+        <div className="max-w-screen-xl w-full text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 leading-snug">
+            Visionity services at your <span className="text-[#FF6B35]">fingertips</span>
+          </h1>
 
-        <button className="bg-white text-gray-800 px-6 py-3 rounded-md font-medium hover:bg-gray-100 dark:bg-[#FF6B35] dark:text-white dark:hover:bg-[#ff844f] transition-colors">
-          Join Visionity
-        </button>
+          <button className={`px-6 py-3 rounded-md font-medium text-sm sm:text-base transition-colors
+            ${darkMode 
+              ? 'bg-[#FF6B35] text-white hover:bg-[#ff844f]' 
+              : 'bg-white text-gray-800 hover:bg-gray-200'}`}>
+            Join Visionity
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -61,55 +61,65 @@ function HeroSection1({ darkMode }) {
   ];
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-black text-white' : 'bg-gray-100 text-gray-900'}`}>
+    <div className={`min-h-screen transition-colors duration-500 ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
-        
+  
         {/* Hero Title and Description */}
         <div className="max-w-6xl mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8">
             Hyperlink InfoSystem Bring Transformation For Global Businesses
           </h1>
-          <div className="h-1 w-24 sm:w-32 bg-gray-300 dark:bg-gray-700 mb-6 sm:mb-8"></div>
-          <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 mb-10 sm:mb-12 md:mb-16 max-w-4xl">
+          <div className={`h-1 w-24 sm:w-32 mb-6 sm:mb-8 ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}></div>
+          <p className={`text-sm sm:text-base md:text-lg mb-10 sm:mb-12 md:mb-16 max-w-4xl ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
             Starting from listening to your business problems to delivering accurate solutions; we make sure to follow
             industry-specific standards and combine them with our technical knowledge, development expertise, and
             extensive research.
           </p>
         </div>
-
+  
         {/* Stats Grid 1 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {stats.slice(0, 4).map((stat, index) => (
-            <div key={index} className="flex items-center p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div
+              key={index}
+              className={`flex items-center p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 ${
+                darkMode ? 'bg-gray-800' : 'bg-white'
+              }`}
+            >
               <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ${stat.bgColor} rounded-lg text-xl sm:text-2xl ${stat.textColor}`}>
                 {stat.icon}
               </div>
               <div className="ml-3 sm:ml-4">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold">{stat.number}</div>
-                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">{stat.label}</div>
+                <div className={`text-xs sm:text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{stat.label}</div>
               </div>
             </div>
           ))}
         </div>
-
+  
         {/* Spacer */}
         <div className="h-6 sm:h-8 md:h-12"></div>
-
+  
         {/* Stats Grid 2 */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {stats.slice(4, 8).map((stat, index) => (
-            <div key={index} className="flex items-center p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div
+              key={index}
+              className={`flex items-center p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 ${
+                darkMode ? 'bg-gray-800' : 'bg-white'
+              }`}
+            >
               <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ${stat.bgColor} rounded-lg text-xl sm:text-2xl ${stat.textColor}`}>
                 {stat.icon}
               </div>
               <div className="ml-3 sm:ml-4">
                 <div className="text-xl sm:text-2xl md:text-3xl font-bold">{stat.number}</div>
-                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">{stat.label}</div>
+                <div className={`text-xs sm:text-sm ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{stat.label}</div>
               </div>
             </div>
           ))}
         </div>
-
+  
         {/* Scroll to Top Button */}
         <div className="hidden md:block fixed bottom-6 right-6">
           <button
@@ -125,6 +135,7 @@ function HeroSection1({ darkMode }) {
       </div>
     </div>
   );
+  
 }
 
 export default HeroSection1;

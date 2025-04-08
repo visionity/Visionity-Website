@@ -45,41 +45,46 @@ const FAQ = ({ darkMode }) => {
   ];
 
   return (
-    <div className={`${darkMode ? 'bg-[#000000] text-white' : 'bg-white text-black'} py-10 px-4 sm:px-6 lg:px-20 transition-all duration-300`}>
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">Frequently Asked Questions</h1>
-        
-        <div className="space-y-4">
-          {faqItems.map((item, index) => (
-            <div
-              key={index}
-              onClick={() => toggleFAQ(index)}
-              className={`border rounded-lg px-5 py-4 cursor-pointer transition-all duration-300 ${
-                darkMode ? 'border-gray-700 bg-gray-900' : 'border-gray-300 bg-gray-100'
-              } ${activeIndex === index ? 'shadow-lg' : 'hover:shadow-md'}`}
-            >
-              <div className="flex justify-between items-center">
-                <h3 className="text-base sm:text-lg font-medium">{item.question}</h3>
-                <span className="text-xl">
-                  {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
-                </span>
-              </div>
-
-              {activeIndex === index && (
-                <div className="mt-3 text-sm sm:text-base leading-relaxed text-gray-600 dark:text-gray-300">
-                  {item.answer}
-                </div>
-              )}
+    <div className={`${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'} py-10 px-4 sm:px-6 lg:px-20 transition-all duration-300`}>
+    <div className="max-w-5xl mx-auto">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10">
+        Frequently Asked Questions
+      </h1>
+  
+      <div className="space-y-4">
+        {faqItems.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => toggleFAQ(index)}
+            className={`border rounded-lg px-5 py-4 cursor-pointer transition-all duration-300 ${
+              darkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-300 bg-gray-100'
+            } ${activeIndex === index ? 'shadow-lg' : 'hover:shadow-md'}`}
+          >
+            <div className="flex justify-between items-center">
+              <h3 className="text-base sm:text-lg font-medium">
+                {item.question}
+              </h3>
+              <span className="text-xl">
+                {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
+              </span>
             </div>
-          ))}
-        </div>
-
-        {/* Testinomials Component */}
-        <div className="mt-16">
-          <Testinomials />
-        </div>
+  
+            {activeIndex === index && (
+              <div className={`mt-3 text-sm sm:text-base leading-relaxed ${
+                darkMode ? 'text-gray-300' : 'text-gray-700'
+              }`}>
+                {item.answer}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
+  
+      {/* Testimonials Component */}
+     
     </div>
+  </div>
+  
   );
 };
 

@@ -3,7 +3,7 @@ import React from 'react';
 
 function Testonomial({ darkMode }) {
   return (
-    <section className={`py-16 ${darkMode ? 'bg-[#000000]' : 'bg-gray-100'}`}>
+    <section className={`py-16 ${darkMode ? 'bg-gray-900' : 'bg-gray-100'}`}>
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -50,7 +50,7 @@ function Testonomial({ darkMode }) {
               key={index}
               className={`rounded-xl p-8 ${
                 darkMode
-                  ? 'bg-[#111111] text-white'
+                  ? 'bg-gray-900 text-white'
                   : 'bg-white text-[#161616]'
               } shadow-lg transition-transform duration-300 hover:-translate-y-2`}
             >

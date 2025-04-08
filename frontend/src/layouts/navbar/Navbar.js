@@ -87,7 +87,7 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
     <nav className={`
       fixed w-full z-50 transition-all duration-300
       ${scrolled ? 'shadow-lg' : ''}
-      ${darkMode ? 'bg-[#000000] text-white' : 'bg-white text-black'}
+      ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}
     `}>
       <div className="max-w-7xl mx-auto">
         {/* Main navbar */}

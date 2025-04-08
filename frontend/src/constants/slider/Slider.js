@@ -79,12 +79,10 @@ export default function Slider({ darkMode }) {
         }
   ];
   const services = [
-    
-   
     {
       title: "Website Development",
       description: "Custom websites built with React and Next.js for high performance and scalability.",
-      image: "https://images.pexels.com/photos/31328987/pexels-photo-31328987/free-photo-of-female-mallard-duck-standing-on-frozen-lake.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" // Replace with your image path
+      image: "https://images.pexels.com/photos/31328987/pexels-photo-31328987/free-photo-of-female-mallard-duck-standing-on-frozen-lake.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
     },
     {
       title: "Mobile App Development",
@@ -107,41 +105,57 @@ export default function Slider({ darkMode }) {
       image: "https://images.pexels.com/photos/3184457/pexels-photo-3184457.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
     },
     {
-        title: "Website Development",
-        description: "Custom websites built with React and Next.js for high performance and scalability.",
-        image: "https://images.pexels.com/photos/31328987/pexels-photo-31328987/free-photo-of-female-mallard-duck-standing-on-frozen-lake.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load" // Replace with your image path
-      },
-      {
-        title: "Mobile App Development",
-        description: "Cross-platform mobile apps built using React Native for seamless user experience.",
-        image: "https://images.pexels.com/photos/4065665/pexels-photo-4065665.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
-      },
-      {
-        title: "E-Commerce Solutions",
-        description: "End-to-end e-commerce platforms with secure payment gateways and user-friendly UI.",
-        image: "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
-      },
-      {
-        title: "SEO & Digital Marketing",
-        description: "Boost your online presence with advanced SEO strategies and digital marketing campaigns.",
-        image: "https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
-      },
-      {
-        title: "UI/UX Design",
-        description: "Create intuitive and engaging user interfaces with cutting-edge design principles.",
-        image: "https://images.pexels.com/photos/3184457/pexels-photo-3184457.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
-      }
+      title: "Website Development",
+      description: "Custom websites built with React and Next.js for high performance and scalability.",
+      image: "https://images.pexels.com/photos/31328987/pexels-photo-31328987/free-photo-of-female-mallard-duck-standing-on-frozen-lake.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Cross-platform mobile apps built using React Native for seamless user experience.",
+      image: "https://images.pexels.com/photos/4065665/pexels-photo-4065665.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+    },
+    {
+      title: "E-Commerce Solutions",
+      description: "End-to-end e-commerce platforms with secure payment gateways and user-friendly UI.",
+      image: "https://images.pexels.com/photos/5436053/pexels-photo-5436053.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+    },
+    {
+      title: "SEO & Digital Marketing",
+      description: "Boost your online presence with advanced SEO strategies and digital marketing campaigns.",
+      image: "https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+    },
+    {
+      title: "UI/UX Design",
+      description: "Create intuitive and engaging user interfaces with cutting-edge design principles.",
+      image: "https://images.pexels.com/photos/3184457/pexels-photo-3184457.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load"
+    }
   ];
+  
 
   return (
-    <div className="container mx-auto pl-3">
-    <main className={`py-8 rounded-xl ${darkMode ? 'bg-[#000000] text-white' : 'bg-white text-black'}`}>
-      <h1 className="text-4xl font-bold mb-8 text-center">Popular Services</h1>
-      
+    <div className="w-full px-4 sm:px-6 lg:px-8">
+    <main
+      className={`max-w-7xl mx-auto py-8 rounded-xl transition-colors duration-300 ${
+        darkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'
+      }`}
+    >
+      {/* Services Slider */}
+      <div className="mb-12">
       <ServicesSlider projects={services} darkMode={darkMode} />
-      <ProjectSlider projects={projects} darkMode={darkMode} />
-      <CasestudySlider projects={projects} darkMode={darkMode} />
+      </div>
+  
+      {/* Projects Slider */}
+      <div className="mb-12">
+        <ProjectSlider projects={projects} darkMode={darkMode} />
+      </div>
+  
+      {/* Case Study Slider */}
+     
     </main>
   </div>
+  
+   
+  
+  
   );
 }
