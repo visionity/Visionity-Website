@@ -72,11 +72,11 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
       ] 
     },
     { 
-      name: 'CONTACT US', 
+      name: 'CONTACT', 
       href: '#contact', 
       id: 'contact',
       hoverContent: [
-        { title: 'Get Quote',  onClick: () => router.push('/contact/quote') },
+        { title: 'Contact Us',  onClick: () => router.push('/contact/contact-us') },
         { title: 'Support', onClick: () => router.push('/contact/support') },
         { title: 'Partnership',onClick: () => router.push('/contact/partnership') }
       ] 
