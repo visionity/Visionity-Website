@@ -12,6 +12,7 @@ import FreelamceBanner from "../../components/home/join";
 import HeroSection1 from "../../components/home/heroSection1";
 import IndustrySlider from "../../components/home/industrySlider";
 import Header from "@/components/header/Header";
+import Technologiessection from "@/components/services/technologiessection";
 
 // Create a context to share dark mode state across components
 export const ThemeContext = createContext({
@@ -64,6 +65,7 @@ export default function Home() {
           <div className="pt-16">
             <Header darkMode={darkMode} />
             <Featuressection darkMode={darkMode} />
+            <Technologiessection darkMode={darkMode}/>
             <Slider darkMode={darkMode} />
             <Testonomial darkMode={darkMode} />
             <HeroSection1 darkMode={darkMode} />
