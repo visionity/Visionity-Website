@@ -77,7 +77,7 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
       id: 'contact',
       hoverContent: [
         { title: 'Contact Us',  onClick: () => router.push('/contact/contact-us') },
-        { title: 'upport', onClick: () => router.push('/contact/support') },
+        { title: 'Support', onClick: () => router.push('/contact/support') },
         { title: 'Partnership',onClick: () => router.push('/contact/partnership') }
       ] 
     }
@@ -95,8 +95,8 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="font-bold text-xl tracking-tight relative cursor-pointer">
-              <span className="text-2xl md:text-3xl font-bold tracking-tight">
-                <span className={darkMode ? 'text-blue-400' : 'text-blue-800'} onClick = {()=>router.push('/')}>VISIONITY</span>
+              <span className="text-xl md:text-2xl font-bold tracking-tight">
+                <span className={darkMode ? 'text-white' : 'text-black'} onClick = {()=>router.push('/')}>VISIONITY</span>
               </span>
             </div>
           </div>
@@ -157,7 +157,7 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
             
             <a 
               href="/get-started" 
-              className="ml-8 px-6 py-3 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors"
+              className={`ml-8 px-6 py-3 ${darkMode ? 'text-black':'text-white'} text-sm font-medium rounded-full  ${darkMode ? 'bg-white' : 'bg-black'}`}
             >
               Join Us
             </a>
@@ -272,13 +272,13 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
             <div className={`mt-6 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
               <a 
                 href="/get-started" 
-                className="block w-full py-3 bg-blue-600 text-white text-center font-medium rounded-full hover:bg-blue-700 transition-colors"
+                className="block w-full py-3 bg-black text-white text-center font-medium rounded-full hover:bg-black transition-colors"
               >
                 Join Us
               </a>
               
               <div className="flex justify-center mt-4 space-x-6">
-                <a href="tel:+1234567890" className={`flex items-center text-sm ${darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}>
+                <a href="tel:+91-9129842706" className={`flex items-center text-sm ${darkMode ? 'text-gray-400 hover:text-blue-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>

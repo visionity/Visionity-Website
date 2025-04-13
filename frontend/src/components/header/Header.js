@@ -11,7 +11,7 @@ import {
 
 export default function HomePage({ darkMode }) {
   return (
-    <div className={darkMode ? 'min-h-screen bg-gray-900 text-white' : 'min-h-screen bg-gray-50 text-black'}>
+    <div className={darkMode ? 'min-h-screen bg-gray-900 text-white' : 'min-h-screen bg-gray-50 text-blac'}>
       <Head>
         <title>Build the Future with Custom Software Solutions</title>
         <meta name="description" content="Empowering businesses with modern software and mobile solutions" />
