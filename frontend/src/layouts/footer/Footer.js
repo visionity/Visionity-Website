@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
+import InteractiveMap from '@/components/footer/map';
 
 const Footer = ({ darkMode }) => {
   const [email, setEmail] = useState('');
@@ -155,14 +156,7 @@ const Footer = ({ darkMode }) => {
           </div>
 
           {/* Map Section */}
-          <div className={`mb-10 border rounded-lg overflow-hidden h-64 ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>
-            <div className={`h-full w-full flex items-center justify-center ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}>
-              <p className="text-center">
-                <i className={`fas fa-map-marked-alt text-4xl mb-3 block ${darkMode ? 'text-blue-500' : 'text-blue-800'}`}></i>
-                <span className="block">Interactive map would be embedded here</span>
-              </p>
-            </div>
-          </div>
+         <InteractiveMap/>
 
           {/* Quick Links */}
           <div className={`flex flex-wrap justify-center gap-6 border-t pt-8 pb-4 ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>

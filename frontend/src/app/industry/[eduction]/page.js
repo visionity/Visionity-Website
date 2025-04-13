@@ -1,3 +1,5 @@
+// import Education from '@/components/industry/education/Education'
+// import Education from '@/components/industry/education /Education'
 import Education from '@/components/industry/education /Education'
 import Footer from '@/layouts/footer/Footer'
 import Navbar from '@/layouts/navbar/Navbar'

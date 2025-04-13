@@ -44,7 +44,7 @@ const EnhancedProjectSlider = ({
         nextSlide();
       }, 3000);
     }
-    
+  
     return () => {
       if (autoplayRef.current) {
         clearInterval(autoplayRef.current);
