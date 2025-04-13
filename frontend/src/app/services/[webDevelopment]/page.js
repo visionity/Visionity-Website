@@ -4,7 +4,7 @@ import Footer from '@/layouts/footer/Footer'
 import Navbar from '@/layouts/navbar/Navbar'
 import React, { useEffect, useState } from 'react'
  
- const page = () => {
+ const Page = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
@@ -20,7 +20,7 @@ import React, { useEffect, useState } from 'react'
       ) {
         setDarkMode(true);
       }
-    }, []);
+    }, [nextSlide]);
   
     // Toggle theme function
     const toggleDarkMode = () => {
@@ -50,5 +50,5 @@ import React, { useEffect, useState } from 'react'
    )
  }
  
- export default page
+ export default Page
  
