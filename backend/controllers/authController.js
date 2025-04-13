@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 
 // Helper function to sign token
@@ -29,7 +29,6 @@ exports.register = async (req, res, next) => {
   try {
     const { name, email, password, role } = req.body;
 
-    // Check if user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(400).json({
@@ -38,7 +37,6 @@ exports.register = async (req, res, next) => {
       });
     }
 
-    // Create new user
     const newUser = await User.create({
       name,
       email,
@@ -60,7 +58,6 @@ exports.login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
-    // Check if email and password exist
     if (!email || !password) {
       return res.status(400).json({
         status: 'fail',
@@ -68,9 +65,8 @@ exports.login = async (req, res, next) => {
       });
     }
 
-    // Check if user exists and password is correct
     const user = await User.findOne({ email }).select('+password');
-    
+
     if (!user || !(await user.comparePassword(password, user.password))) {
       return res.status(401).json({
         status: 'fail',
@@ -78,7 +74,6 @@ exports.login = async (req, res, next) => {
       });
     }
 
-    // Send token
     createSendToken(user, 200, res);
   } catch (error) {
     res.status(500).json({
@@ -86,4 +81,26 @@ exports.login = async (req, res, next) => {
       message: error.message
     });
   }
+};
+
+// --- Add placeholder implementations for now ---
+
+exports.forgotPassword = (req, res) => {
+  res.status(200).json({ message: 'forgotPassword not implemented yet' });
+};
+
+exports.resetPassword = (req, res) => {
+  res.status(200).json({ message: 'resetPassword not implemented yet' });
+};
+
+exports.updatePassword = (req, res) => {
+  res.status(200).json({ message: 'updatePassword not implemented yet' });
+};
+
+exports.getMe = (req, res) => {
+  res.status(200).json({ message: 'getMe not implemented yet' });
+};
+
+exports.updateMe = (req, res) => {
+  res.status(200).json({ message: 'updateMe not implemented yet' });
 };
