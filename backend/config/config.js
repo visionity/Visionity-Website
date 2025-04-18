@@ -2,12 +2,12 @@ require('dotenv').config();
 
 module.exports = {
   // Server configuration
-  port: process.env.PORT || 5000,
+  port: process.env.PORT || 5001,
   nodeEnv: process.env.NODE_ENV || 'development',
   
   // MongoDB configuration
   mongo: {
-    uri: process.env.MONGO_URI || 'mongodb://localhost:27017/techpyro',
+    uri: process.env.MONGO_URI ,
     options: {
       useNewUrlParser: true,
       useUnifiedTopology: true
@@ -16,7 +16,7 @@ module.exports = {
   
   // JWT configuration
   jwt: {
-    secret: process.env.JWT_SECRET || 'your-secret-key-for-development-only',
+    secret: process.env.JWT_SECRET ,
     expiresIn: process.env.JWT_EXPIRES_IN || '90d',
     cookieExpiresIn: process.env.JWT_COOKIE_EXPIRES_IN || 90
   },
@@ -27,8 +27,8 @@ module.exports = {
     port: process.env.EMAIL_PORT,
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
-    from: process.env.EMAIL_FROM || 'noreply@techpyro.com',
-    adminEmail: process.env.ADMIN_EMAIL || 'admin@techpyro.com'
+    from: process.env.EMAIL_FROM || 'noreply@visionity.com',
+    adminEmail: process.env.ADMIN_EMAIL || 'admin@visionity.com'
   },
   
   // Upload configuration

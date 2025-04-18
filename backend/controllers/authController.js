@@ -2,6 +2,7 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const { promisify } = require('util');
+const sendEmail = require('../utils/email'); // You'll need to implement this
 
 // Helper function to sign token
 const signToken = (id) => {
@@ -162,14 +163,42 @@ exports.forgotPassword = async (req, res, next) => {
     await user.save({ validateBeforeSave: false });
 
     // 3) Send it to user's email
-    // In a real application, you would send an email here
-    // For now, we'll just return the token in the response
+    const resetURL = `${req.protocol}://${req.get('host')}/api/v1/users/resetPassword/${resetToken}`;
     
-    res.status(200).json({
-      status: 'success',
-      message: 'Token sent to email!',
-      resetToken // In production, don't expose this
-    });
+    const message = `Forgot your password? Submit a PATCH request with your new password to: ${resetURL}.\nIf you didn't forget your password, please ignore this email!`;
+    
+    try {
+      // In a production app, you would send an actual email
+      // For now, we'll just log the reset URL and token
+      console.log('Reset URL:', resetURL);
+      console.log('Reset Token:', resetToken);
+      
+      /* 
+      // Uncomment this when you implement the email utility
+      await sendEmail({
+        email: user.email,
+        subject: 'Your password reset token (valid for 10 min)',
+        message
+      });
+      */
+      
+      res.status(200).json({
+        status: 'success',
+        message: 'Token sent to email!',
+        // Only include these in development
+        resetToken,
+        resetURL
+      });
+    } catch (err) {
+      user.passwordResetToken = undefined;
+      user.passwordResetExpires = undefined;
+      await user.save({ validateBeforeSave: false });
+      
+      return res.status(500).json({
+        status: 'error',
+        message: 'There was an error sending the email. Try again later!'
+      });
+    }
   } catch (error) {
     res.status(500).json({
       status: 'error',

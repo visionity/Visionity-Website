@@ -20,7 +20,7 @@ const projectUploads = uploadMiddleware.fields([
   { name: 'gallery', maxCount: 10 }
 ]);
 
-router.post('/', projectUploads, projectController.createProject);
+router.post('/create-project', projectUploads, projectController.createProject);
 router.patch('/:id', projectUploads, projectController.updateProject);
 router.delete('/:id', projectController.deleteProject);
 

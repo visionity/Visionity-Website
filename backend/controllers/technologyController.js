@@ -1,4 +1,4 @@
-const Course = require('../models/course');
+const Course = require('../models/technology');
 
 // Get all courses with filtering, sorting and pagination
 exports.getAllCourses = async (req, res) => {
