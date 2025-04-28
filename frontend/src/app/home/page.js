@@ -12,7 +12,7 @@ import FreelamceBanner from "../../components/home/join";
 import HeroSection1 from "../../components/home/heroSection1";
 import IndustrySlider from "../../components/home/industrySlider";
 import Header from "@/components/header/Header";
-import Technologiessection from "@/components/services/technologiessection";
+import Technologiessection from "@/components/service/technologiessection";
 import Toppage from "@/components/home/top";
 
 // Create a context to share dark mode state across components

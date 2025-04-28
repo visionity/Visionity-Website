@@ -66,7 +66,7 @@ export default function ContactUs() {
         <meta name="description" content="Get in touch with our team" />
       </Head>
       
-      <div className="bg-gray-50 py-36">
+      <div className="bg-gray-50 py-48">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h1>

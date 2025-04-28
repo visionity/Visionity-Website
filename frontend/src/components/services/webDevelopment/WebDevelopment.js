@@ -38,7 +38,7 @@ export default function WebDevelopment({ darkMode }) {
   };
 
   return (
-    <div className={`font-sans transition-colors duration-300 ${darkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
+    <div className={`font-sans transition-colors duration-300 py-42 ${darkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
       <Head>
         <title>Mobile App Development Company | YourBrand</title>
         <meta name="description" content="Custom iOS, Android, and cross-platform mobile apps tailored to your business needs." />

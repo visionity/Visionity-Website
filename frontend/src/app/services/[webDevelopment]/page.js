@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import WebDevelopment from '@/components/sevices/webDevelopment/WebDevelopment';
+import WebDevelopment from '@/components/services/webDevelopment/WebDevelopment';
 import Footer from '@/layouts/footer/Footer';
 import Navbar from '@/layouts/navbar/Navbar';
 

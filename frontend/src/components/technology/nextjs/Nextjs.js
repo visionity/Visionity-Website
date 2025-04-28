@@ -99,7 +99,7 @@ export default function Nextjs() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <section className="bg-blue-900 text-white py-32 px-4">
+      <section className="bg-blue-900 text-white py-64 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">The Latest Tech News & Innovations</h1>
