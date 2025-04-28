@@ -170,10 +170,10 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
               <div className="flex flex-col md:flex-row justify-between items-center">
                 {/* Logo with animated gradient */}
                 <div className="text-2xl md:text-3xl font-bold mb-4 md:mb-0 relative overflow-hidden group cursor-pointer" onClick={() => router.push('/')}>
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600">
                     VisionityAI
                   </span>
-                  <div className={`h-1 w-full mt-1 ${darkMode ? 'bg-purple-500' : 'bg-purple-400'} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
+                  <div className={`h-1 w-full mt-1 ${darkMode ? 'bg-purple-500' : 'bg-purple-600'} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}></div>
                 </div>
                 
                 {/* Social media icons */}
@@ -204,7 +204,7 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
                 {/* Call to action buttons with improved styling */}
                 <div className="flex flex-wrap justify-center gap-2">
                   <motion.button 
-                    className={`relative overflow-hidden ${darkMode ? 'bg-purple-700 hover:bg-purple-600' : 'bg-purple-600 hover:bg-purple-500'} px-4 py-2 rounded-full text-white font-medium transition-all duration-300 text-sm md:text-base`}
+                    className={`relative overflow-hidden ${darkMode ? 'bg-purple-700 hover:bg-blue-600' : 'bg-blue-600 hover:bg-blue-600'} px-4 py-2 rounded-full text-white font-medium transition-all duration-300 text-sm md:text-base`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -220,7 +220,7 @@ const Navbar = ({ darkMode = false, onToggleDarkMode }) => {
                     <span className="absolute inset-0 w-full h-full bg-white opacity-0 hover:opacity-20 transition-opacity"></span>
                   </motion.button>
                   <motion.button 
-                    className={`relative overflow-hidden ${darkMode ? 'bg-pink-700 hover:bg-pink-600' : 'bg-pink-600 hover:bg-pink-500'} px-4 py-2 rounded-full text-white font-medium transition-all duration-300 text-sm md:text-base`}
+                    className={`relative overflow-hidden ${darkMode ? 'bg-pink-700 hover:bg-blue-800' : 'bg-blue-800 hover:bg-blue-900'} px-4 py-2 rounded-full text-white font-medium transition-all duration-300 text-sm md:text-base`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
