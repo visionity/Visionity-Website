@@ -58,7 +58,7 @@ export default function Toppage({ darkMode = false }) {
       {particles.map((particle, index) => (
         <div 
           key={index}
-          className={`absolute rounded-full ${darkMode ? 'bg-purple-400' : 'bg-indigo-300'} opacity-20 z-1`}
+          className={`absolute rounded-full ${darkMode ? 'bg-blue-400' : 'bg-blue-300'} opacity-20 z-1`}
           style={{
             left: `${particle.x}%`, 
             top: `${particle.y}%`,
@@ -78,12 +78,12 @@ export default function Toppage({ darkMode = false }) {
       
         
         {/* Main content with enhanced typography */}
-        <main className="mt-16 md:mt-24 max-w-4xl mx-auto">
+        <main className="mt-16 md:mt-24 max-w-4xl ">
           {/* Animated headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-            <span className="block mb-2">Building Tech Future</span>
+            <span className="block mb-2">Revolutionising The Future</span>
             <span className="flex items-center">
-              With <span className={`ml-2 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`}>Innovation!</span>
+              With <span className={`ml-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>Tech & AI!</span>
             </span>
           </h1>
           
@@ -94,7 +94,7 @@ export default function Toppage({ darkMode = false }) {
             </div>
             <div>
               <p className="text-xl md:text-2xl flex items-center flex-wrap">
-                <span className={`${darkMode ? 'text-red-400' : 'text-red-600'} font-bold text-2xl mr-2`}>Game</span> 
+                <span className={`${darkMode ? 'text-blue-400' : 'text-blue-600'} font-bold text-2xl mr-2`}>Game</span> 
                 <span>Development company in 2024</span>
               </p>
               <div className="flex mt-1 space-x-2">
@@ -109,9 +109,9 @@ export default function Toppage({ darkMode = false }) {
           <div className="mt-10">
             <button 
               className={`group relative overflow-hidden px-8 py-4 rounded-xl font-bold text-white shadow-lg
-                ${darkMode ? 'bg-gradient-to-r from-purple-700 to-indigo-700' : 'bg-gradient-to-r from-purple-600 to-indigo-600'}
+                ${darkMode ? 'bg-gradient-to-r from-blue-700 to-blue-700' : 'bg-gradient-to-r from-blue-600 to-blue-600'}
                 transition-all duration-300 ease-out
-                ${isAnimating ? 'shadow-purple-500/50 translate-y-0' : ''}`}
+                ${isAnimating ? 'shadow-blue-500/50 translate-y-0' : ''}`}
               style={{
                 transform: isAnimating ? 'perspective(500px) rotateX(10deg) scale(1.05)' : 'perspective(500px) rotateX(0) scale(1)',
                 transformStyle: 'preserve-3d'
@@ -189,7 +189,7 @@ export default function Toppage({ darkMode = false }) {
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/70" onClick={() => setShowModal(false)}></div>
-          <div className={`relative ${darkMode ? 'bg-gray-900' : 'bg-white'} rounded-xl shadow-2xl p-6 w-full max-w-md mx-auto`}>
+          <div className={`relative ${darkMode ? 'bg-blue-900' : 'bg-white'} rounded-xl shadow-2xl p-6 w-full max-w-md mx-auto`}>
             <h3 className="text-xl font-bold mb-4">Drop Your Queries</h3>
             <div className="space-y-4">
               <div>
